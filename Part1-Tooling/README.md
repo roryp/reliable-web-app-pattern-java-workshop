@@ -54,7 +54,7 @@ code .
 
 Once Visual Studio Code is launched, you should see a popup allowing you to click on the button **Reopen in Container**.
 
-![Reopen in Container](docs/assets/vscode-reopen-in-container.png)
+![Reopen in Container](images/vscode-reopen-in-container.png)
 
 If you don't see the popup, open the Visual Studio Code Command Palette to execute the command. There are three ways to open the command palette:
 
@@ -64,7 +64,7 @@ If you don't see the popup, open the Visual Studio Code Command Palette to execu
 
 Once the command palette is open, search for `Dev Containers: Rebuild and Reopen in Container`.
 
-![WSL Ubuntu](docs/assets/vscode-reopen-in-container-command.png)
+![WSL Ubuntu](images/vscode-reopen-in-container-command.png)
 
 ### 3. Log in to Azure
 
@@ -180,7 +180,7 @@ By default, your user account is added to the application.  To enable additional
 - Search for, then select **Proseware**.
 - Add the user to the application.
 
-![Proseware Azure Active Directory Enterprise Applications](docs/assets/AAD-Enterprise-Application.png)
+![Proseware Azure Active Directory Enterprise Applications](images/AAD-Enterprise-Application.png)
 
 ### 8. Open and use the application
 
@@ -190,7 +190,7 @@ Use the following to find the URL for the Proseware application that you have de
 azd env get-values --output json | jq -r .frontdoor_url
 ```
 
-![Proseware AAD](docs/assets/proseware.png)
+![Proseware AAD](images/proseware.png)
 
 It takes approximately 5 minutes for the Azure App Service to respond to requests using the code deployed during step 6.
 
