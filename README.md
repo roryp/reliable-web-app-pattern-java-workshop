@@ -1,21 +1,14 @@
-# Project Title
+# Reliable Web Apps Java Workshop
 
 ## Table of Contents
 
-# Project Title
-
-## Table of Contents
-
-1. [Prerequisites](#prerequisites)
-2. [Part 1 - Tooling](part1-tooling/README.md)
-3. [Part 2 - Building a Simple App](part2-building-a-simple-app/README.md)
-4. [Part 3 - Testing](part3-testing/README.md)
-5. [Part 4 - Deployment](part4-deployment/README.md)
-6. [Part 5 - Monitoring and Logging](part5-monitoring-and-logging/README.md)
-7. [Part 6 - Scaling and Load Balancing](part6-scaling-and-load-balancing/README.md)
-8. [Part 7 - Performance Efficiency](part7-performance-efficiency/README.md)
-9. [Troubleshooting & FAQ](#troubleshooting--faq)
-10. [Feedback & Improvements](#feedback--improvements)
+- [Part 1 - Tooling](Part1-Tooling/README.md)
+- [Part 2 - RWA Overview](Part2-RWA-Overview/README.md)
+- [Part 3 - Cost Optimization](Part3-Cost-Optimization/README.MD)
+- [Part 4 - Reliability](Part4-Reliability/README.md)
+- [Part 5 - Security](Part5-Security/README.md)
+- [Part 6 - Operational Excellence](Part6-Operational-Excellence/README.md)
+- [Part 7 - Performance Efficiency](Part7-Performance-Efficiency/README.MD)
 
 ## Prerequisites
 
