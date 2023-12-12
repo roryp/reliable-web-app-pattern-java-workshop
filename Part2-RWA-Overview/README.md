@@ -1,4 +1,4 @@
-# Reliable Web App Pattern - .NET Overview
+# Reliable Web App Pattern - Java Overview
 
 The reliable web app pattern is a set of principles that helps developers successfully migrate web applications to the cloud. It provides implementation guidance built on the Azure Well-Architected Framework. The pattern focuses on the minimal changes you need to make to ensure the success of your web app in the cloud.
 
@@ -38,4 +38,4 @@ The reliable web app pattern is built off of 5 pillars. Each pillar is a set of 
 
 Now that you have a basic understanding of what the reliable web app pattern is, let's go back into the development and Azure tooling you'll need for the rest of this workshop and make sure everything is running.
 
-[Part 1 - Tooling Setup](../Part%201%20-%20Tooling/README.md)
+[Part 1 - Tooling Setup](../Part1-Tooling/README.md)

@@ -201,3 +201,7 @@ To tear down the deployment, run the following command:
 ```shell
 azd down
 ```
+
+Now that you have deployed the reference implementation, you can move on to the next section of the workshop. 
+
+[Part 3 - Cost Optimization](../Part3-Cost-Optimization/README.md)
