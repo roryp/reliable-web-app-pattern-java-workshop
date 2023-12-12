@@ -8,7 +8,7 @@ Proseware created a failover plan that outlines what to do in a disaster recover
 
 Before we execute the failover plan, we should understand the web app architecture. Proseware's web app is running in Azure and provides streaming video training content. The architecture includes Azure App Service, Azure Storage, Azure Files (mounted as File Storage on App Service), Application Insights, Key Vault, Azure Cache for Redis, and Azure Database for PostgreSQL. Several of these components use virtual network integration, virtual network injection, and secured with private endpoints. Users authenticate with Azure AD and diagnostics for Azure services are stored in Azure Log Analytics Workspace. Proseware placed the web app behind Azure Front Door with Azure Web Application Firewall policies enabled. Front Door load balances traffic between regions.
 
-![Diagram showing the architecture of the reference implementation](docs/assets/reliable-web-app-java.png)
+![Diagram showing the architecture of the reference implementation](images/reliable-web-app-java.png)
 
 The web app stores several types of data and uses several different data stores:
 
@@ -31,7 +31,7 @@ The two flows of traffic we will address are:
 * User traffic: dashed blue line
 * Data replication: solid green line
 
-![Diagram showing the simplified architecture for failover](docs/assets/failover-part1.png)
+![Diagram showing the simplified architecture for failover](images/failover-part1.png)
 
 ### Cut-off traffic to the *westus3* region
 
@@ -47,7 +47,7 @@ We want to inform users about the outage and stop traffic flowing to *westus3* w
 
 With these changes complete, the simplified Proseware multi-region solution is adjusted as shown. Azure Front Door no longer sends data to the *westus3* region.
 
-![Diagram showing the change resulting from part 1](docs/assets/failover-part1-complete.png)
+![Diagram showing the change resulting from part 1](images/failover-part1-complete.png)
 
 ### Stop data replication to *eastus*
 
@@ -83,7 +83,7 @@ We want to disconnect the solid green arrow in this step of the failover. In thi
 
 With these changes complete, the simplified Proseware multi-region solution is adjusted as shown. The solid green arrow for data replication is removed. Both *westus3* and *eastus* are stand-alone copies of the production web app and we have prepared *eastus* to become the primary region.
 
-![Diagram showing the change resulting from part 2](docs/assets/failover-part2-complete.png)
+![Diagram showing the change resulting from part 2](images/failover-part2-complete.png)
 
 ### Update web app configuration
 To connect to the Azure Database for Postgres Flexible Server in *east* we need to use a new connection string.
@@ -126,7 +126,7 @@ We want to modify the solid green arrow in this step of the failover. In this si
 
 With these changes complete, the simplified Proseware multi-region solution is adjusted as shown. The solid green arrow for data replication is re-added. However website traffic is still flowing to the maintenance page.
 
-![Diagram showing the change resulting from part 3](docs/assets/failover-part3-complete.png)
+![Diagram showing the change resulting from part 3](images/failover-part3-complete.png)
 
 ### Validate the *eastus* traffic
 
@@ -151,7 +151,7 @@ We want to stop traffic flowing to the maintenance page and send it to the now r
 
 With these changes complete, the simplified Proseware multi-region solution is adjusted as shown. Replication is restored and Azure Front Door is now sending traffic to the secondary region.
 
-![Diagram showing the change resulting from part 4](docs/assets/failover-part4-complete.png)
+![Diagram showing the change resulting from part 4](images/failover-part4-complete.png)
 
 ### Clean up
 
