@@ -1,6 +1,6 @@
 # Reliability
 
-You can test and configure the three code-level design patterns with this implementation: retry, circuit-breaker, and cache-aside. The following paragraphs detail steps to test the three code-level design patterns.
+In this part, we'll guide you through the process of testing and configuring three key code-level design patterns: retry, circuit-breaker, and cache-aside, using our implementation. The upcoming sections will provide detailed steps for you to follow and experiment with these design patterns.
 
 ## Retry and Circuit Break Pattern
 

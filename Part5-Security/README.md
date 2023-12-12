@@ -1,3 +1,11 @@
+# Security
+
+Welcome to the "Security" section of our workshop. In this part, we will delve into Proseware's Cloud Security Architecture. We'll explore how Proseware leverages advanced cloud technologies and services from Microsoft Azure and Microsoft Entra ID to secure their web applications against various cyber threats.
+
+We'll start by understanding the core components of Proseware's cloud security architecture and how each service enhances the overall security posture of their web applications.
+
+A key focus will be on Microsoft Entra ID, a comprehensive cloud-based identity and access management service that stands at the forefront of Proseware's security strategy. We'll discuss its role in authenticating and authorizing users, ensuring that only legitimate personnel can access the web application.
+
 ## Introduction to Proseware's Cloud Security Architecture
 
 In today's digital landscape, robust security measures are paramount for any web application. Proseware's adoption of advanced cloud technologies and services from Microsoft Azure and Microsoft Entra ID exemplifies a commitment to securing their web applications against a myriad of cyber threats. This page delves into the core components of Proseware's cloud security architecture, outlining the functionalities and benefits of each service in enhancing the overall security posture of their web applications.
@@ -291,8 +299,3 @@ Administrator-level access to the database grants permissions to perform privile
 
 **Don't give application elevated permissions.** You shouldn't grant administrator-level access to the application identity. You should configure least-privileged access for the application to the database. It limits the blast radius of bugs and security breaches. You have two primary methods to access the Azure PostgreSQL database. You can use Microsoft Entra authentication or PostgreSQL authentication. For more information, see [JDBC with Azure PostgreSQL](/azure/developer/java/spring-framework/configure-spring-data-jdbc-with-azure-postgresql).
 
-## Cost optimization
-
-Cost optimization principles balance business goals with budget justification to create a cost-effective web application. They help reduce unnecessary expenses and improving operational efficiencies. This section describes cost-optimization recommendations to apply while re-platforming a web app.
-
-*Reference implementation.* The app uses Azure Files integrated with App Service to save training videos that users upload. Refactoring this integration to use Azure Storage blobs would reduce hosting costs and should be evaluated as a possible future modernization.
