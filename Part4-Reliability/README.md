@@ -6,7 +6,7 @@ You can test and configure the three code-level design patterns with this implem
 
 We built an app configuration setting that lets you simulate and test a transient failure when making a web request to GitHub. The reference implementation uses the `Spring Boot Actuator` to monitor retries. After deploying the application, navigate to your site’s `/actuator` endpoint to see a list of Spring Boot Actuator endpoints. Navigate to `/actuator/retries` to see retried calls. Set the `AIRSONIC_RETRY_DEMO` application setting to 1. This will simulate a failure for every web request to GitHub. A value of 2 generates a 503 error for every other request.
 
-![airsonic-retry-demo](docs/assets/airsonic-retry-demo.png)
+![airsonic-retry-demo](images/airsonic-retry-demo.png)
 
 Follow these steps to set up this test:
 
@@ -24,9 +24,9 @@ Follow these steps to set up this test:
 
 1. Make note of the retry events and circuit breaker in the actuator endpoints.
 
-![airsonic-retry-demo](docs/assets/proseware-retries.png)
+![airsonic-retry-demo](images/proseware-retries.png)
 
-![airsonic-retry-demo](docs/assets/proseware-circuit-breaker.png)
+![airsonic-retry-demo](images/proseware-circuit-breaker.png)
 
 ## Cache-Aside Pattern
 
@@ -38,23 +38,23 @@ In the next request we see that the API call was only 55ms because it didn't hav
 
 Using the (PREVIEW) Redis Console we can see this data stored in Redis.
 
-![image of Azure Cache for Redis Console shows user settings](docs/assets/proseware-redis.png)
+![image of Azure Cache for Redis Console shows user settings](images/proseware-redis.png)
 
 ## Logs
 
 Application logging is enabled. To view the logs, navigate to *Diagnose and solve problems*. From there, click on *Application Logs*.
 
-![Diagnose and solve problems](docs/assets/appservice-diagnose-and-solve-problems.png)
+![Diagnose and solve problems](images/appservice-diagnose-and-solve-problems.png)
 
-![Application Logs](docs/assets/appservice-diagnose-and-solve-problems-application-logs.png)
+![Application Logs](images/appservice-diagnose-and-solve-problems-application-logs.png)
 
 ## Application Insights
 
 Exceptions in the Prosware web application are reported with Application Insights. Some videos in Proseware cannot be played correctly. 
 
-![VideoError](docs/assets/proseware-video-error.png)
+![VideoError](images/proseware-video-error.png)
 
 Using *Application Insights*, we see that a NullPointerException was thrown while processing the videos.
 
-![AppInsightsFailures](docs/assets/application-insights-failures.png)
-![AppInsightsEndToEndDetails](docs/assets/application-insights-end-to-end-details.png)
+![AppInsightsFailures](images/application-insights-failures.png)
+![AppInsightsEndToEndDetails](images/application-insights-end-to-end-details.png)
