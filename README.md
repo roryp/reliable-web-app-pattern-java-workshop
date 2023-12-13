@@ -4,11 +4,11 @@
 
 - [Part 1 - Tooling](Part1-Tooling/README.md)
 - [Part 2 - RWA Overview](Part2-RWA-Overview/README.md)
-- [Part 3 - Cost Optimization](Part3-Cost-Optimization/README.MD)
+- [Part 3 - Cost Optimization](Part3-Cost-Optimization/README.md)
 - [Part 4 - Reliability](Part4-Reliability/README.md)
 - [Part 5 - Security](Part5-Security/README.md)
 - [Part 6 - Operational Excellence](Part6-Operational-Excellence/README.md)
-- [Part 7 - Performance Efficiency](Part7-Performance-Efficiency/README.MD)
+- [Part 7 - Performance Efficiency](Part7-Performance-Efficiency/README.md)
 
 ## Prerequisites
 
