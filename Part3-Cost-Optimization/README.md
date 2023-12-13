@@ -31,6 +31,12 @@ In this exercise, you will analyze the cost of running the reference application
 az redis update --name <your_redis_cache_name> --sku Basic
 ```
 
+<!--
+TODO https://github.com/roryp/azure-sdk-for-java/blob/main/sdk/appconfiguration/azure-data-appconfiguration/src/test/java/com/azure/data/appconfiguration/ConfigurationClientTest.java
+-->
+
+## Conclusion
+
 In conclusion, optimizing costs in nonproduction environments is a continuous process that requires regular review and adjustment of resources. By analyzing costs, identifying cost reduction opportunities, implementing cost reduction measures, and reviewing their impact, you can ensure that you're not overspending on your nonproduction environments.
 
 Next, we will explore the concept of reliability in cloud applications. Please proceed to [Part 4 - Reliability](../Part4-Reliability/README.md) for more information.
