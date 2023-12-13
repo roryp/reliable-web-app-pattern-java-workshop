@@ -22,3 +22,9 @@ Using the (PREVIEW) Redis Console we can see this data stored in Redis.
 
 Thank you for attending this workshop.  We hope you learned something and feel more comfortable tackling the patterns that are used in enterprise web applications.  You can now clean up the resources that you used:
 
+To tear down the deployment, run the following command:
+
+```shell
+azd down
+```
+
