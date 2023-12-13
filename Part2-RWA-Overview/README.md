@@ -36,6 +36,6 @@ The reliable web app pattern is built off of 5 pillars. Each pillar is a set of 
 
 ## Summary
 
-Now that you have a basic understanding of what the reliable web app pattern is, let's go back into the development and Azure tooling you'll need for the rest of this workshop and make sure everything is running.
+Now that you have a basic understanding of what the reliable web app pattern is, let's go to the next section.
 
-[Part 1 - Tooling Setup](../Part1-Tooling/README.md)
+[Part 3 - Cost Optimization ](../Part3-Cost-Optimization/README.md)
