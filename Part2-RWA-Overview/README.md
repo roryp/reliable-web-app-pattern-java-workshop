@@ -38,4 +38,4 @@ The reliable web app pattern is built off of 5 pillars. Each pillar is a set of 
 
 Now that you have a basic understanding of what the reliable web app pattern is, let's go to the next section.
 
-[Part 3 - Cost Optimization ](../Part3-Cost-Optimization/README.md)
+[Part 3 - Cost Optimization](../Part3-Cost-Optimization/README.md)
