@@ -299,3 +299,6 @@ Administrator-level access to the database grants permissions to perform privile
 
 **Don't give application elevated permissions.** You shouldn't grant administrator-level access to the application identity. You should configure least-privileged access for the application to the database. It limits the blast radius of bugs and security breaches. You have two primary methods to access the Azure PostgreSQL database. You can use Microsoft Entra authentication or PostgreSQL authentication. For more information, see [JDBC with Azure PostgreSQL](/azure/developer/java/spring-framework/configure-spring-data-jdbc-with-azure-postgresql).
 
+In conclusion, maintaining the security of your application is of utmost importance. By following best practices such as least-privileged access and choosing the right authentication method, you can significantly reduce the risk of security breaches.
+
+Next, we will delve into operational excellence in cloud applications. Please proceed to [Part 6 - Operational Excellence](../Part6-Operational-Excellence/README.md) for more information.
