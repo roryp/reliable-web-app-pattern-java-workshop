@@ -28,18 +28,6 @@ Follow these steps to set up this test:
 
 ![airsonic-retry-demo](images/proseware-circuit-breaker.png)
 
-## Cache-Aside Pattern
-
-The cache-aside pattern enables us to limit read queries to  the Azure PostgreSQL Flexible Server. It also provides a layer of redundancy that can keep parts of our application running in the event of issue with Azure PostgreSQL Database.
-
-For more information, see [cache-aside pattern](https://learn.microsoft.com/azure/architecture/patterns/cache-aside).
-
-In the next request we see that the API call was only 55ms because it didn't have to connect to SQL Server and instead used the data from Azure Cache for Redis.
-
-Using the (PREVIEW) Redis Console we can see this data stored in Redis.
-
-![image of Azure Cache for Redis Console shows user settings](images/proseware-redis.png)
-
 ## Logs
 
 Application logging is enabled. To view the logs, navigate to *Diagnose and solve problems*. From there, click on *Application Logs*.
@@ -58,3 +46,7 @@ Using *Application Insights*, we see that a NullPointerException was thrown whil
 
 ![AppInsightsFailures](images/application-insights-failures.png)
 ![AppInsightsEndToEndDetails](images/application-insights-end-to-end-details.png)
+
+In conclusion, monitoring and diagnosing exceptions in your application is crucial for maintaining a healthy and reliable system. Application Insights provides valuable insights into the exceptions that occur in your application, helping you identify and fix issues promptly.
+
+Next, we will delve into the security aspects of cloud applications. Please proceed to [Part 5 - Security](../Part5-Security/README.md) for more information.

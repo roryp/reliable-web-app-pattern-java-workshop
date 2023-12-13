@@ -93,7 +93,6 @@ To connect to the Azure Database for Postgres Flexible Server in *east* we need 
 
 With these changes complete the *eastus* web app is now ready for testing.
 
-
 ### Restore Data Replication to *westus3*
 
 We want to modify the solid green arrow in this step of the failover. In this simplified representation, the line represents two types of data (Azure Files and Database replication).
@@ -158,6 +157,9 @@ With these changes complete, the simplified Proseware multi-region solution is a
 1. Azure App Service maintenance page can now be removed
 1. Azure PostgreSQL Database Flexible Server *westus3* is now a point-in-time backup of the production system that can be used as another recovery option or removed from the subscription.
 
-
 ## Failback
 Using the steps described above Proseware plans to migrate their traffic from *eastus* back to *westus3* when possible as latency in the web app is a primary concern for their users.
+
+In conclusion, maintaining operational excellence in your cloud application involves a combination of monitoring, diagnostics, and recovery strategies. By leveraging Azure services, you can ensure your application remains robust and resilient under varying operational conditions.
+
+Next, we will explore performance efficiency in cloud applications. Please proceed to [Part 7 - Performance Efficiency](../Part7-Performance-Efficiency/README.md) for more information.
