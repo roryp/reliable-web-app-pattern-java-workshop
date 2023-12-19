@@ -17,7 +17,7 @@ azd env set APP_ENVIRONMENT prod
 | Azure Database for PostgreSQL - Flexible Server | Burstable B1ms (B_Standard_B1ms) | General Purpose D4s_v3 (GP_Standard_D4s_v3) |
 
 
-## Exercise: Analyze and Reduce Costs
+## Exercise: Analyze Costs
 
 In this exercise, you will analyze the cost of running the reference application in the development and production environments. You will then identify opportunities to reduce costs in the nonproduction environment.
 
@@ -31,9 +31,9 @@ In this exercise, you will analyze the cost of running the reference application
 az redis update --name <your_redis_cache_name> --sku Basic
 ```
 
-<!--
-TODO https://github.com/roryp/azure-sdk-for-java/blob/main/sdk/appconfiguration/azure-data-appconfiguration/src/test/java/com/azure/data/appconfiguration/ConfigurationClientTest.java
--->
+## Note
+
+Proseware uses Azure Files integrated with App Service to save training videos that users upload. Consider refactoring this integration to use Azure Storage blobs to reduce hosting costs.
 
 ## Conclusion
 
