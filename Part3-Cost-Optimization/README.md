@@ -2,11 +2,7 @@
 
 Production environments need SKUs that meet the service level agreements (SLAs), features, and scale needed for production. But nonproduction environments don't normally need the same capabilities. You can optimize costs in nonproduction environments by using cheaper SKUs that have lower capacity and SLAs. 
 
-Proseware uses the same infrastructure-as-code (IaC) templates for development and production deployments. The only difference is a few SKU differences to optimize cost in the development environment. Proseware chose to use cheaper SKUs in the development environment for Azure Cache for Redis, App Service, and Azure Database for PostgreSQL Flexible Server. The following table shows the services and the SKUs Proseware chose for each environment. You should choose SKUs that meet the needs of each environment.
-
-```shell
-azd env set APP_ENVIRONMENT prod
-```
+Proseware uses the same infrastructure-as-code (IaC) templates for development and production deployments. The only difference is a few SKU differences to optimize cost in the development environment. Proseware chose to use cheaper SKUs in the development environment for Azure Cache for Redis, App Service, and Azure Database for PostgreSQL Flexible Server. The following table shows the services and the SKUs Proseware chose for each environment.
 
 *Table 2. Reference implementation SKU differences between the development and production environments.*
 
@@ -25,10 +21,11 @@ In this exercise, you will analyze the cost of running the reference application
 
 2. **Identify Cost Reduction Opportunities**: Based on your analysis, identify services where you could potentially reduce costs in the nonproduction environment. Consider downgrading the SKU, reducing the number of instances, or turning off services when they're not in use.
 
-3. **Implement Cost Reduction Measures**: Choose one of the cost reduction opportunities you identified and implement it. For example, you could downgrade the SKU of the Azure Cache for Redis service in the nonproduction environment:
+3. **Implement Cost Reduction Measures**: Sowngrade the SKU to the Azure nonproduction environment:
 
 ```shell
-az redis update --name <your_redis_cache_name> --sku Basic
+azd env set APP_ENVIRONMENT dev
+azd up
 ```
 
 ## Note
