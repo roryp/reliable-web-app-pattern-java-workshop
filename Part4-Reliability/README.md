@@ -1,6 +1,6 @@
 # Reliability
 
-In this part, we'll guide you through the process of testing and configuring three key code-level design patterns: retry, circuit-breaker, and cache-aside, using our implementation. The upcoming sections will provide detailed steps for you to follow and experiment with these design patterns.
+In this part, we'll guide you through the process of testing and configuring two key code-level design patterns: retry, and circuit-breaker, using our implementation. The upcoming sections will provide detailed steps for you to follow and experiment with these design patterns.
 
 ## Retry and Circuit Break Pattern
 
@@ -36,17 +36,4 @@ Application logging is enabled. To view the logs, navigate to *Diagnose and solv
 
 ![Application Logs](images/appservice-diagnose-and-solve-problems-application-logs.png)
 
-## Application Insights
-
-Exceptions in the Prosware web application are reported with Application Insights. Some videos in Proseware cannot be played correctly. 
-
-![VideoError](images/proseware-video-error.png)
-
-Using *Application Insights*, we see that a NullPointerException was thrown while processing the videos.
-
-![AppInsightsFailures](images/application-insights-failures.png)
-![AppInsightsEndToEndDetails](images/application-insights-end-to-end-details.png)
-
-In conclusion, monitoring and diagnosing exceptions in your application is crucial for maintaining a healthy and reliable system. Application Insights provides valuable insights into the exceptions that occur in your application, helping you identify and fix issues promptly.
-
-Next, we will delve into the security aspects of cloud applications. Please proceed to [Part 5 - Security](../Part5-Security/README.md) for more information.
+In part 6 we will revisit the problems but next, we will delve into the security aspects of cloud applications. Please proceed to [Part 5 - Security](../Part5-Security/README.md) for more information.
