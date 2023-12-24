@@ -36,4 +36,10 @@ Application logging is enabled. To view the logs, navigate to *Diagnose and solv
 
 ![Application Logs](images/appservice-diagnose-and-solve-problems-application-logs.png)
 
-In part 6 we will revisit the problems but next, we will delve into the security aspects of cloud applications. Please proceed to [Part 5 - Security](../Part5-Security/README.md) for more information.
+## Summary
+
+In this part, we learned how to test and configure two key code-level design patterns: retry, and circuit-breaker, using our implementation. We also learned how to view application logs.
+
+In the sixth part of our series, we will delve into the use of Azure Monitor, a comprehensive solution for collecting, analyzing, and acting on telemetry from your cloud and on-premises environments. This powerful tool will aid us in troubleshooting any issues that may arise. Following that, in Part 7, we will shift our focus to the utilization of Redis Cache. Redis Cache is an in-memory data structure store, used as a database, cache, and message broker. We will explore its performance efficiency and how it can be leveraged to enhance the speed and responsiveness of our applications
+
+Please proceed to [Part 5 - Security](../Part5-Security/README.md) for more information.
