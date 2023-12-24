@@ -1,14 +1,14 @@
 # Operational Excellence
 
-One of Proseware's business objectives was to reach a 99.9% service level objective for availability. To meet that objective, the web app is deployed to two regions in an active-passive configuration. The active (primary) region handles 100% of user traffic under normal operations and data replicates to the passive (secondary) region asynchronously. This configuration enables Proseware to quickly transition from the primary region to the secondary to mitigate the risk of an outage from impacting their availability.
+One of Proseware's business objectives is to reach a 99.9% service level objective for availability. To meet that objective, the web app is deployed to two regions in an active-passive configuration. The active (primary) region handles 100% of user traffic under normal operations, and data is replicated to the passive (secondary) region asynchronously. This configuration enables Proseware to quickly transition from the primary region to the secondary one to mitigate the risk of an outage from impacting their availability.
 
-In this part we will look at using application insights to locate any issues that might arise in the application. We will also look at how to use Azure Monitor to monitor the health of the application.
+In this section, we will look at using application insights to identify any issues that might arise in the application. We will also learn how to use Azure Monitor to monitor the health of the application.
 
 ## Monitoring
 
-The reference implementation demonstrates how to programmatically enable Application Insights. It enable Application Insights, with the following Maven dependency in the `Reference App\src\airsonic-advanced\airsonic-main\pom.xml` file.
+The reference implementation demonstrates how to programmatically enable Application Insights by adding the following Maven dependency to the `pom.xml` file located at `Reference App/src/airsonic-advanced/airsonic-main/`.
 
-```XML
+```xml
 <dependency>
    <groupId>com.microsoft.azure</groupId>
    <artifactId>applicationinsights-runtime-attach</artifactId>
@@ -25,11 +25,11 @@ The Application Map in Application Insights provides a visual representation of 
 1. Select **Application Map** from the left-hand menu.
 2. Select the **Web** component to view the Application Map for your application.
 
-In Part 4 we triggered a failure. and the exceptions from Part 4 in the Prosware web application were reported with Application Insights. as you recall, some videos in Proseware cannot be played correctly. 
+In Part 4, we triggered a failure, and the exceptions from Part 4 in the Proseware web application were reported with Application Insights. As you recall, some videos in Proseware cannot be played correctly. 
 
 ![VideoError](images/proseware-video-error.png)
 
-Open *Application Insights*, and fine the `NullPointerException` that was thrown while processing the videos.
+Open *Application Insights*, and find the `NullPointerException` that was thrown while processing the videos.
 
 ![AppInsightsFailures](images/application-insights-failures.png)
 ![AppInsightsEndToEndDetails](images/application-insights-end-to-end-details.png)

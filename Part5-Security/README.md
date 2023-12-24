@@ -3,7 +3,7 @@
 Welcome to the "Security" section of our workshop. In this part, we will delve into Proseware's Cloud Security Architecture. We'll explore how Proseware leverages advanced cloud technologies and services from Microsoft Azure and Microsoft Entra ID to secure their web applications against various cyber threats.
 
 ## Background
-By default, your user account is added to the application.  To enable additional users:
+By default, your user account is added to the application. To enable additional users, follow these steps:
 
 - Sign in to the [Azure Portal](https://portal.azure.com).
 - Select **Azure Active Directory** -> **Enterprise Applications**.
@@ -12,7 +12,7 @@ By default, your user account is added to the application.  To enable additional
 
 ![Proseware Azure Active Directory Enterprise Applications](./images/AAD-Enterprise-Application.png)
 
-## Anable anonymous access to public content
+## Enable anonymous access to public content
 
 In this section, we will enable anonymous access to public content.  This will allow users to view public content without having to sign in.
 
