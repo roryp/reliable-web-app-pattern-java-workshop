@@ -1,16 +1,20 @@
 # Reliability
 
-In this part, we'll guide you through the process of testing and configuring two key code-level design patterns: retry, and circuit-breaker, using our implementation. The upcoming sections will provide detailed steps for you to follow and experiment with these design patterns.
+In this part, we'll guide you through the process of testing and configuring two key code-level design patterns: the retry and the circuit-breaker. The retry pattern involves making repeated attempts to execute a task until it succeeds, while the circuit-breaker pattern prevents a system from executing a task that's likely to fail, to avoid further system degradation.
 
 ## Retry and Circuit Break Pattern
 
-We built an app configuration setting that lets you simulate and test a transient failure when making a web request to GitHub. The reference implementation uses the `Spring Boot Actuator` to monitor retries. After deploying the application, navigate to your site’s `/actuator` endpoint to see a list of Spring Boot Actuator endpoints. Navigate to `/actuator/retries` to see retried calls. Set the `AIRSONIC_RETRY_DEMO` application setting to 1. This will simulate a failure for every web request to GitHub. A value of 2 generates a 503 error for every other request.
+We built an app configuration setting, `AIRSONIC_RETRY_DEMO`, that lets you simulate and test a transient failure when making a web request to GitHub. When set to 1, this setting simulates a failure for every web request to GitHub, triggering both the retry and circuit-breaker mechanisms. A value of 2 generates a 503 error for every other request. Other values will not trigger these behaviors.
 
-![airsonic-retry-demo](images/airsonic-retry-demo.png)
+The reference implementation uses the `Spring Boot Actuator` to monitor retries. After deploying the application, navigate to your site’s `/actuator` endpoint to see a list of Spring Boot Actuator endpoints. Navigate to `/actuator/retries` to see retried calls.
+
+When the `AIRSONIC_RETRY_DEMO` setting is set to 1, we not only simulate a failure for every web request to GitHub, but we also trigger the circuit-breaker mechanism. This mechanism prevents further attempts to call the API when it is failing, thus avoiding unnecessary load and potential cascading failures.
 
 Follow these steps to set up this test:
 
 1. Set the `AIRSONIC_RETRY_DEMO` setting to 1 in App Service Configuration.
+
+![airsonic-retry-demo](images/airsonic-retry-demo.png)
 
 1. Changing a application setting will cause the App Service to restart. Wait for the app to restart.
 
@@ -21,10 +25,11 @@ Follow these steps to set up this test:
     * https://<APP_NAME>.azurewebsites.net/actuator/metrics/resilience4j.circuitbreaker.not.permitted.calls
 
 1. Navigate to https://<APP_NAME>.azurewebsites.net/index and refresh the page. Every time you refresh the page, a call to GitHub is made.
-
-1. Make note of the retry events and circuit breaker in the actuator endpoints.
+1. Make note of the retry events in the actuator endpoints.
 
 ![airsonic-retry-demo](images/proseware-retries.png)
+
+To monitor the circuit-breaker, navigate to the https://<APP_NAME>.azurewebsites.net/actuator/metrics/resilience4j.circuitbreaker.not.permitted.calls endpoint. This endpoint provides metrics about the number of calls that were not permitted due to the circuit breaker being open.
 
 ![airsonic-retry-demo](images/proseware-circuit-breaker.png)
 
