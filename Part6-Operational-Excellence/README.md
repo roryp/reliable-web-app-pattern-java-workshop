@@ -4,26 +4,38 @@ One of Proseware's business objectives was to reach a 99.9% service level object
 
 ![Diagram showing the architecture of the reference implementation](images/reliable-web-app-java.png)
 
-## Understanding the architecture
+In this section we will explore how to enable monitoring, diagnostics, and recovery strategies to ensure your application remains robust and resilient under varying operational conditions.
 
-In this part we will execute part of the the failover plan, which is to failover the web app from the primary region to the secondary region. The following diagram shows the architecture of the reference implementation.
+## Monitoring
 
-![Diagram showing the architecture of the reference implementation](./images/failover-part4-complete.png)
+The reference implementation demonstrates how to programmatically enable Application Insights. It enable Application Insights, with the following Maven dependency in the `Reference App\src\airsonic-advanced\airsonic-main\pom.xml` file.
 
-Steps to failover the web app from the primary region to the secondary region:
+```XML
+<dependency>
+   <groupId>com.microsoft.azure</groupId>
+   <artifactId>applicationinsights-runtime-attach</artifactId>
+   <version>3.4.7</version>
+</dependency>
+```
 
-1.  Disable the primary region
-2.  Enable the secondary region
-3.  Update the DNS record to point to the secondary region
+This dependency adds the necessary Application Insights components to your application build. It allows you to visualize metrics in Azure Application Insights. Spring Boot registers several core metrics in Application Insights such as Java virtual machine (JVM), CPU, Tomcat, and others. Application Insights automatically collects from logging frameworks such as Log4j and Logback.
 
-## Failover the web app
+## Live Metrics
 
-1.  Open the Azure portal and navigate to the **Resource groups** blade.
-2.  Select the resource group that contains the primary web app.
-5.  Wait for the failover to complete.
-6.  Once the failover is complete, navigate to the web app in the secondary region and verify that the web app is running in the secondary region.
-7.  Navigate to the web app in the primary region and verify that the web app is stopped.
-8.  Navigate to the Traffic Manager profile and verify that the profile is now pointing to the secondary region.
+Let's explore how to visualize the Application Insights for your application.
+
+1. Open the [Azure portal](https://portal.azure.com) and navigate to your Application Insights resource.
+2. Select **Live Metrics Stream** from the left-hand menu.
+3. Select **Start Streaming** to view the live metrics for your application.
+
+## Application Map
+
+The Application Map in Application Insights provides a visual representation of the components in your application and the relationships between them. It automatically discovers application components and maps the communication between them. The Application Map is useful for identifying performance bottlenecks and failures in your application.
+
+1. Select **Application Map** from the left-hand menu.
+2. Select the **Web** component to view the Application Map for your application.
+
+## Conclusion
 
 In conclusion, maintaining operational excellence in your cloud application involves a combination of monitoring, diagnostics, and recovery strategies. By leveraging Azure services, you can ensure your application remains robust and resilient under varying operational conditions.
 
