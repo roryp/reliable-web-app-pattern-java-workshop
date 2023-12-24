@@ -10,7 +10,7 @@ By default, your user account is added to the application. To enable additional 
 - Search for, then select **Proseware**.
 - Add the user to the application.
 
-![Proseware Azure Active Directory Enterprise Applications](./images/AAD-Enterprise-Application.png)
+![Proseware's Azure Active Directory enterprise applications](./images/AAD-Enterprise-Application.png)
 
 ## Enable anonymous access to public content
 
@@ -29,7 +29,7 @@ In this section, we will enable anonymous access to public content.  This will a
 
 This Java method configures HTTP security. It sets up rules for which paths require user authentication and which ones don't. It also configures Cross-Origin Resource Sharing (CORS), Cross-Site Request Forgery (CSRF) protection, and iframe options. It adds a custom filter, sets up OAuth 2.0 login, and defines logout behavior.
 
-Step 2: Modify Security Configurations
+### Step 2: Modify Security Configurations
 1. on line 180, enhance the `GlobalSecurityConfig` method to the `WebSecurityConfiguration` class by allow all requests to paths that start with "/public/" without requiring authentication:
 
 ```java
@@ -57,7 +57,7 @@ spring.resources.static-locations=classpath:/public/
 10. access the public content by adding `/public.txt` to the URL e.g. `https://proseware-<yourname>.azurewebsites.net/public.txt`
 11. You should see the content of the `public.txt` file displayed in the browser.
 
-### Step 2: Deploy the App with Azure Developer CLI
+### Step 3: Deploy the App with Azure Developer CLI
 1. Deploy the application: `azd up`
 2. Once deployed, access the application URL provided by Azure.
 

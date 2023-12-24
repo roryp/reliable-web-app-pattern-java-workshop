@@ -2,9 +2,9 @@
 
 ## Introduction
 
-Proseware has a target SLO of 99.9% for availability, about 8.7 hours of downtime per year.Its production environment needs a SKUs that meet its service level agreements (SLAs), features, and scale needed. But its nonproduction environments don't need the same capabilities. In this section, we will look and how to optimize costs in nonproduction environments by using cheaper SKUs that have lower capacity and SLAs. 
+Proseware has a target SLO of 99.9% for availability, about 8.7 hours of downtime per year.Its production environment needs a SKUs that meet its service level agreements (SLAs), features, and scale needed. But its nonproduction environments don't need the same capabilities. In this section, we will explore how to optimize costs in nonproduction environments by using cheaper SKUs that have lower capacity and SLAs. 
 
-Proseware uses the same infrastructure-as-code (IaC) templates for development and production deployments. The only difference is a few SKU differences to optimize cost in the development environment. Proseware chose to use cheaper SKUs in the development environment for Azure Cache for Redis, App Service, and Azure Database for PostgreSQL Flexible Server. The following table shows the services and the SKUs Proseware chose for each environment.
+Proseware uses the same infrastructure-as-code (IaC) templates for both the development and production deployments. The only difference is a few SKU differences to optimize cost in the development environment. Proseware chose to use cheaper SKUs in the development environment for Azure Cache for Redis, App Service, and Azure Database for PostgreSQL Flexible Server. The following table shows the services and the SKUs Proseware chose for each environment.
 
 *Table 1. Reference implementation SKU differences between the development and production environments.*
 
