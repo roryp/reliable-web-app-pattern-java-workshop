@@ -16,22 +16,21 @@ Follow these steps to set up this test:
 
 ![airsonic-retry-demo](images/airsonic-retry-demo.png)
 
-1. Changing a application setting will cause the App Service to restart. Wait for the app to restart.
+2. Changing an application setting will cause the App Service to restart. Wait for the app to restart.
 
-1. We added Spring Actuator Dependencies to the Proseware project. This enables actuator endpoints. Navigate to the following sites.
+3. We added Spring Actuator Dependencies to the Proseware project. This enables actuator endpoints. Navigate to the following sites:
     * https://<APP_NAME>.azurewebsites.net/actuator
-    * https://<APP_NAME>.azurewebsites.net/actuator/retryevents
     * https://<APP_NAME>.azurewebsites.net/actuator/retryevents
     * https://<APP_NAME>.azurewebsites.net/actuator/metrics/resilience4j.circuitbreaker.not.permitted.calls
 
-1. Navigate to https://<APP_NAME>.azurewebsites.net/index and refresh the page. Every time you refresh the page, a call to GitHub is made.
-1. Make note of the retry events in the actuator endpoints.
+4. Navigate to https://<APP_NAME>.azurewebsites.net/index and refresh the page. Every time you refresh the page, a call to GitHub is made.
+5. Make note of the retry events in the actuator endpoints.
 
-![airsonic-retry-demo](images/proseware-retries.png)
+![proseware-retries](images/proseware-retries.png)
 
 To monitor the circuit-breaker, navigate to the https://<APP_NAME>.azurewebsites.net/actuator/metrics/resilience4j.circuitbreaker.not.permitted.calls endpoint. This endpoint provides metrics about the number of calls that were not permitted due to the circuit breaker being open.
 
-![airsonic-retry-demo](images/proseware-circuit-breaker.png)
+![proseware-circuit-breaker](images/proseware-circuit-breaker.png)
 
 ## Logs
 
