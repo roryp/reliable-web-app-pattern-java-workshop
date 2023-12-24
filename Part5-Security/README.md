@@ -19,7 +19,6 @@ In this section, we will enable anonymous access to public content.  This will a
 1. Modifying Security Configurations: Adjusting the `GlobalSecurityConfig.java` to control access, allowing public content visibility while securing other parts of the application.
 2. Deploying with Azure Developer CLI: Utilizing Azure's tools to deploy and make the application live.
 
-
 ## Steps
 
 ### Step 1: Modify Security Configurations
@@ -31,7 +30,7 @@ In this section, we will enable anonymous access to public content.  This will a
 This Java method configures HTTP security. It sets up rules for which paths require user authentication and which ones don't. It also configures Cross-Origin Resource Sharing (CORS), Cross-Site Request Forgery (CSRF) protection, and iframe options. It adds a custom filter, sets up OAuth 2.0 login, and defines logout behavior.
 
 Step 2: Modify Security Configurations
-1. on line 180, Enhance the `GlobalSecurityConfig` method to the `WebSecurityConfiguration` class to allow all requests to paths that start with "/public/" without requiring authentication :
+1. on line 180, enhance the `GlobalSecurityConfig` method to the `WebSecurityConfiguration` class by allow all requests to paths that start with "/public/" without requiring authentication:
 
 ```java
     .antMatchers("/public/**").permitAll() 
