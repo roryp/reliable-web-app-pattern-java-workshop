@@ -12,11 +12,12 @@ The cache-aside pattern enables us to limit read queries to  the Azure PostgreSQ
 
 For more information, see [cache-aside pattern](https://learn.microsoft.com/azure/architecture/patterns/cache-aside).
 
-In the next request we see that the API call was only 55ms because it didn't have to connect to SQL Server and instead used the data from Azure Cache for Redis.
+1. Navigate to https://<APP_NAME>.azurewebsites.net/index and refresh the page. The first time you refresh the page, a call to GitHub is made. In subsequent requests we see that the API call was only 55ms because it didn't have to connect to SQL Server and instead used the data from Azure Cache for Redis.
 
-Using the (PREVIEW) Redis Console we can see this data stored in Redis.
+Using the (PREVIEW) Redis Console, we can see this data stored in Redis. To access the Redis Console, select the `Console` tab in the working pane of the `Resource menu`. You can securely issue commands to your Azure Cache for Redis instances from the Azure portal over a TLS connection. The console is a great way to test out Redis commands and experiment with the data store. You can also use the console to view the current state of your Redis instance.
 
 ![image of Azure Cache for Redis Console shows user settings](images/proseware-redis.png)
+
 
 ## Cleaning up
 
