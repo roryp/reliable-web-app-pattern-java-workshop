@@ -1,5 +1,7 @@
 # Reliable Web Apps Java Workshop
 
+This workshop is designed to help you learn how to take your application's first step into the cloud and build reliable web applications using Java. You can think of the Reliable Web Application (RWA) pattern as a pattern of patterns. Each pattern provides prescriptive guidance on how to build a specific aspect of a reliable web application. You can use them together or separately.
+
 ## Table of Contents
 
 - [Part 1 - Tooling](Part1-Tooling/README.md)
@@ -18,10 +20,12 @@
 - [Permissions to register an application in Azure AD](https://learn.microsoft.com/azure/active-directory/develop/quickstart-register-app)
 - Visual Studio Code [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 
-## Troubleshooting & FAQ
+## Video Walkthrough
 
-(Add common issues and their solutions here)
+Matt Soucoup recorded a video series that walks through the same pillars and patterns as covered in this workshop. You can find the videos [here](https://www.youtube.com/watch?v=5du8gfo9M7g&list=PLI7iePan8aH5wNEbsGS13W46wA2pZQ7Ea).
 
-## Feedback & Improvements
+## More Links and Resources
 
-(Add information on how participants can provide feedback or suggest improvements)
+* [Reliable Web App Pattern Code Repository](https://aka.ms/eap/rwa/java)
+* [Azure Architecture Guidance](https://learn.microsoft.com/azure/architecture/web-apps/guides/reliable-web-app/java/plan-implementation)
+* [Applying the pattern in-depth](https://learn.microsoft.com/azure/architecture/web-apps/guides/reliable-web-app/java/apply-pattern)
