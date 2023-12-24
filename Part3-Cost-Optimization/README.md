@@ -4,7 +4,7 @@ Production environments need SKUs that meet the service level agreements (SLAs),
 
 Proseware uses the same infrastructure-as-code (IaC) templates for development and production deployments. The only difference is a few SKU differences to optimize cost in the development environment. Proseware chose to use cheaper SKUs in the development environment for Azure Cache for Redis, App Service, and Azure Database for PostgreSQL Flexible Server. The following table shows the services and the SKUs Proseware chose for each environment.
 
-*Table 2. Reference implementation SKU differences between the development and production environments.*
+*Table 1. Reference implementation SKU differences between the development and production environments.*
 
 | Service | Development environment SKU | Production environment SKU |
 | --- | --- | --- |
@@ -15,13 +15,7 @@ Proseware uses the same infrastructure-as-code (IaC) templates for development a
 
 ## Exercise: Analyze Costs
 
-In this exercise, you will analyze the cost of running the reference application in the development and production environments. You will then identify opportunities to reduce costs in the nonproduction environment.
-
-1. **Analyze Costs**: Use the Azure Cost Management and Billing service to analyze the costs associated with each service listed in Table 2. Note the costs for both the development and production environment SKUs.
-
-2. **Identify Cost Reduction Opportunities**: Based on your analysis, identify services where you could potentially reduce costs in the nonproduction environment. Consider downgrading the SKU, reducing the number of instances, or turning off services when they're not in use.
-
-3. **Implement Cost Reduction Measures**: Sowngrade the SKU to the Azure nonproduction environment:
+In this exercise, you will Implement Cost Reduction Measures by downgrade the SKU to the Azure nonproduction environment:
 
 ```shell
 azd env set APP_ENVIRONMENT dev
