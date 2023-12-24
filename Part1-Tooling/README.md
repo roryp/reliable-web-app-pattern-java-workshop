@@ -1,6 +1,6 @@
 ## Prerequisites
 
-- [Azure Subscription](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers//).
+- [Azure Subscription](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers).
 - [Visual Studio Code](https://code.visualstudio.com/).
 - [Docker Desktop](https://www.docker.com/get-started/).
 - [Permissions to register an application in Azure AD](https://learn.microsoft.com/entra/identity-platform/quickstart-register-app).
@@ -14,7 +14,7 @@
 
 ## Steps to deploy the reference implementation
 
-This section describes the deployment steps for the reference implementation of a reliable web application pattern with Java on Microsoft Azure. There are nine steps, including teardown.
+This section describes the nine steps to deploy the reference implementation of a reliable web application pattern with Java on Microsoft Azure, including the teardown process.
 
 For users familiar with the deployment process, you can use the following list of the deployments commands as a quick reference. The commands assume you have logged into Azure through the Azure CLI and Azure Developer CLI and have selected a suitable subscription:
 
@@ -68,14 +68,14 @@ Once the command palette is open, search for `Dev Containers: Rebuild and Reopen
 
 ### 3. Log in to Azure
 
-Before deploying, you must be authenticated to Azure and have the appropriate subscription selected.  To authenticate:
+Before deploying, you must be authenticated to Azure and have the appropriate subscription selected.  Each command will open a browser allowing you to authenticate.  
+To authenticate:
 
 ```shell
 az login --scope https://graph.microsoft.com//.default
 azd auth login
 ```
-
-Each command will open a browser allowing you to authenticate.  To list the subscriptions you have access to:
+To list the subscriptions you have access to:
 
 ```shell
 az account list
@@ -101,7 +101,7 @@ azd env new eap-javarwa
 azd env set DATABASE_PASSWORD "AV@lidPa33word"
 ```
 
-Substitute the environment name and database password for your own values.
+Replace the placeholders for the environment name and database password with your own values.
 
 By default, Azure resources are sized for a "development" mode. Set the `APP_ENVIRONMENT` to `prod` using the following code to deploy production SKUs:
 
@@ -131,7 +131,7 @@ Set the `AZURE_LOCATION` to the primary region:
 azd env set AZURE_LOCATION westus3
 ```
 
-You want to make sure the region has availability zones. Azure Database for PostgreSQL - Flexible Server [zone-redundant high availability](https://learn.microsoft.com/azure/postgresql/flexible-server/concepts-high-availability) requires availability zones.
+Ensure that the selected region has availability zones. Azure Database for PostgreSQL - Flexible Server [zone-redundant high availability](https://learn.microsoft.com/azure/postgresql/flexible-server/concepts-high-availability) requires availability zones.
 
 If doing a multi-region deployment, set the `AZURE_LOCATION2` to the secondary region:
 
@@ -169,7 +169,7 @@ azd env set AZURE_RESOURCE_GROUP $SECONDARY_RESOURCE_GROUP
 azd deploy
 ```
 
-The provisioning and deployment process can take anywhere from 20 minutes to over an hour, depending on system load and your bandwidth.
+The duration of the provisioning and deployment process can vary from 20 minutes to over an hour, depending on the system load and your internet bandwidth.
 
 ### 7. Add users to Azure Active Directory enterprise applications (optional)
 
@@ -192,7 +192,7 @@ azd env get-values --output json | jq -r .frontdoor_url
 
 ![Proseware AAD](images/proseware.png)
 
-It takes approximately 5 minutes for the Azure App Service to respond to requests using the code deployed during step 6.
+Please note that it may take approximately 5 minutes for the Azure App Service to start responding to requests after the code has been deployed in step 6.
 
 ### 9. Teardown
 
