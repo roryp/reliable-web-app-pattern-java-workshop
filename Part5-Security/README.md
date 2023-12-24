@@ -2,10 +2,23 @@
 
 Welcome to the "Security" section of our workshop. In this part, we will delve into Proseware's Cloud Security Architecture. We'll explore how Proseware leverages advanced cloud technologies and services from Microsoft Azure and Microsoft Entra ID to secure their web applications against various cyber threats.
 
+## Background
+By default, your user account is added to the application.  To enable additional users:
+
+- Sign in to the [Azure Portal](https://portal.azure.com).
+- Select **Azure Active Directory** -> **Enterprise Applications**.
+- Search for, then select **Proseware**.
+- Add the user to the application.
+
+![Proseware Azure Active Directory Enterprise Applications](./images/AAD-Enterprise-Application.png)
+
+## Anable anonymous access to public content
+
+In this section, we will enable anonymous access to public content.  This will allow users to view public content without having to sign in.
+
 1. Modifying Security Configurations: Adjusting the `GlobalSecurityConfig.java` to control access, allowing public content visibility while securing other parts of the application.
 2. Updating the Playlist Entity: Implementing a public/private toggle in `Playlist.java`` to manage playlist visibility.
-3. Creating a "Sonos" Account: Developing a method in UserService.java to add a specialized user with specific permissions.
-4. Deploying with Azure Developer CLI: Utilizing Azure's tools to deploy and make the application live.
+3. Deploying with Azure Developer CLI: Utilizing Azure's tools to deploy and make the application live.
 
 ## Steps
 
@@ -41,19 +54,6 @@ Welcome to the "Security" section of our workshop. In this part, we will delve i
        this.shared = shared;
    }
    ```
-
-### Step 3: Create "Sonos" Account
-1. Identify the user service file, typically `UserService.java`.
-2. Create a method to add a new user:
-
-   ```java
-   public void createSonosAccount() {
-       User sonosUser = new User("sonos", "password"); // Use a secure password
-       // Set necessary permissions
-       userRepository.save(sonosUser);
-   }
-   ```
-3. Invoke this method at an appropriate place in your application startup or through an admin panel.
 
 ### Step 4: Deploy the App with Azure Developer CLI
 1. Deploy the application: `azd up`
