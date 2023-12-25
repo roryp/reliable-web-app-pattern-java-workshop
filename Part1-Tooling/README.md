@@ -33,7 +33,9 @@ azd env set AZURE_RESOURCE_GROUP $SECONDARY_RESOURCE_GROUP
 azd deploy
 ```
 
-The following detailed deployment steps assume you are using a Dev Container inside Visual Studio Code.
+## Detailed deployment steps 
+
+The following steps assume you are using a Dev Container inside Visual Studio Code.
 
 ### 1. Clone the repo
 
