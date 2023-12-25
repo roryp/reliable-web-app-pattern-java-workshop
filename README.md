@@ -29,3 +29,36 @@ Matt Soucoup recorded a video series that walks through the same pillars and pat
 * [Reliable Web App Pattern Code Repository](https://aka.ms/eap/rwa/java)
 * [Azure Architecture Guidance](https://learn.microsoft.com/azure/architecture/web-apps/guides/reliable-web-app/java/plan-implementation)
 * [Applying the pattern in-depth](https://learn.microsoft.com/azure/architecture/web-apps/guides/reliable-web-app/java/apply-pattern)
+
+## Glossary
+
+| Term                           | Description                                                                                           |
+|--------------------------------|-------------------------------------------------------------------------------------------------------|
+| 12-Factor App                   | A methodology for building software-as-a-service apps that emphasizes portability, scalability, and maintainability. |
+| Application Insights           | An Azure service for application performance management and monitoring. |
+| Azure AD | Azure Active Directory, Microsoft's cloud-based identity and access management service. |
+| Azure App Service | A fully managed platform for building, deploying, and scaling web apps. |
+| Azure Cache for Redis          | Managed in-memory data store based on Redis                                                           |
+| Azure Database for PostgreSQL  | Managed service for PostgreSQL databases                                                              |
+| Azure Files                    | Fully managed file shares in the cloud                                                                |
+| Azure Front Door               | Content delivery network and global load balancer                                                     |
+| Azure Key Vault                | Centralized storage of application secrets                                                           |
+| Azure Monitor | A service that provides full-stack monitoring, advanced analytics, and automated insights across applications and Azure resources. |
+| Azure Private Link             | Access to PaaS services over a private endpoint in your virtual network                               |
+| Azure Web Application Firewall | Centralized protection of web apps from exploits and vulnerabilities                                 |
+| Azure Well-Architected Framework | A guide for building secure, high-performing, resilient, and efficient applications on Azure. |
+| Cache-Aside Pattern | A caching pattern where the application code first checks if data is in the cache before retrieving it from the data store. |
+| Circuit-Breaker Pattern | A design pattern that stops the application from performing an operation that's likely to fail. |
+| Composite SLA                   | Overall availability estimate based on dependencies and architecture                                |
+| Dev Containers | A feature in Visual Studio Code that allows you to use a Docker container as a full-featured development environment. |
+| Docker | A tool designed to make it easier to create, deploy, and run applications by using containers. |
+| Microsoft Entra ID             | Cloud-based identity and access management service                                                    |
+| PostgreSQL Flexible Server | A configurable option in Azure for deploying PostgreSQL databases, offering scalability and flexibility. |
+| Redis Cache | An in-memory data store used as a database and cache, known for its speed and support for various data structures. |
+| Reliable web app pattern       | Principles for updating web apps for the cloud                                                       |
+| Retry Pattern | A design pattern that enables an application to retry an operation in the expectation that it'll succeed. |
+| Service level agreement (SLA)  | Provider’s commitment to certain service levels                                                       |
+| Service level objective (SLO)  | Target for web app availability                                                                       |
+| SKU | Stock Keeping Unit, a specific version or configuration of a cloud service or resource. |
+| Spring Boot Actuator | A tool to help monitor and manage Spring Boot applications. |
+| The Five Pillars | The reliable web app pattern is built off of 5 pillars. Each pillar is a set of patterns that are derived from both the Azure Well-Architected Framework and 12-factor app methodology. |
