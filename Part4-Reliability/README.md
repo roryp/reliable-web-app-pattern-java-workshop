@@ -47,3 +47,6 @@ In this part, we learned how to test and configure two key code-level design pat
 In the sixth part of our series, we will delve into the use of Azure Monitor, a comprehensive solution for collecting, analyzing, and acting on telemetry from your cloud and on-premises environments. This powerful tool will aid us in troubleshooting any issues that may arise. Following that, in Part 7, we will shift our focus to the utilization of Redis Cache. Redis Cache is an in-memory data structure store, used as a database, cache, and message broker. We will explore its performance efficiency and how it can be leveraged to enhance the speed and responsiveness of our applications
 
 Before we proceed to the monitoring section, we need to address the important topic of [Security](../Part5-Security/README.md).
+
+## Resources
+[Well-Architected Framework reliability portal](https://learn.microsoft.com/azure/well-architected/reliability)

@@ -21,8 +21,11 @@ To access the Redis Console, select the `Console` tab in the working pane of the
 ## Cleaning Up
 
 Thank you for attending this workshop.  We hope you learned something and feel more comfortable tackling the patterns that are used in enterprise web applications. You can now clean up the resources that you used.
-To tear down the deployment, run the following command:
+To tear down the deployment, run the following command (the process to teardown may take a few minutes):
 
 ```shell
 azd down
 ```
+
+## Resources
+[Well-Architected Framework Performance portal](https://learn.microsoft.com/azure/well-architected/performance-efficiency)

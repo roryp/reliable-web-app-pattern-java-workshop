@@ -62,6 +62,5 @@ Optimizing costs in nonproduction environments is a continuous process that requ
 
 Next, we will explore the concept of reliability in cloud applications. Please proceed to [Part 4 - Reliability](../Part4-Reliability/README.md) for more information.
 
-## Additional resources
-
-[Cost Optimization](https://learn.microsoft.com/azure/well-architected/cost-optimization)
+## Resources
+[Well-Architected Framework cost optimization portal](https://learn.microsoft.com/azure/well-architected/cost-optimization)
