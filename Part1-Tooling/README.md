@@ -7,7 +7,7 @@
 - Visual Studio Code [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers).
 
 > **WINDOWS**
-> If you are using Windows, you must enable long paths.  Do the following as a local Administrator:
+> If you are using Windows, you must enable long paths.  Perform the following steps as a local Administrator:
 >
 > - Open the Registry Editor, navigate to `HKLM\SYSTEM\CurrentControlSet\Control\FileSystem` and set DWORD `LongPathsEnabled` to 1.
 > - Run `git config --system core.longpaths true`
@@ -70,8 +70,7 @@ Once the command palette is open, search for `Dev Containers: Rebuild and Reopen
 
 ### 3. Log in to Azure
 
-Before deploying, you must be authenticated to Azure and have the appropriate subscription selected.  Each command will open a browser allowing you to authenticate.  
-To authenticate:
+Before deploying, you must be authenticated to Azure and have the appropriate subscription selected. Each command will open a browser, allowing you to authenticate:
 
 ```shell
 az login --scope https://graph.microsoft.com//.default

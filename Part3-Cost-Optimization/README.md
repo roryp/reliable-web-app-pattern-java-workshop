@@ -15,7 +15,7 @@ Proseware uses the same infrastructure-as-code (IaC) templates for both the deve
 | Azure Database for PostgreSQL - Flexible Server | Burstable B1ms (B_Standard_B1ms) | General Purpose D4s_v3 (GP_Standard_D4s_v3) |
 
 
-## Excercise - Implementing Cost Reduction Measures
+## Exercise - Implementing Cost Reduction Measures
 
 In this exercise, we will focus on implementing cost reduction measures for our Azure environment. One effective way to manage costs in Azure is by adjusting the Service Tier or SKU (Stock Keeping Unit) based on the environment's requirements. 
 

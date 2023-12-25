@@ -16,7 +16,7 @@ But first, let's explore what it means to converge in the cloud and create an ap
 
 ## Pattern of patterns
 
-That's not to say that the reliable web app pattern is simpilistic. It's not. It's a pattern of patterns. Each pattern provides prescriptive guidance on how to build a specific aspect of a reliable web application. You can use them together or separately.
+That's not to say that the reliable web app pattern is simplistic. It's not. It's a pattern of patterns. Each pattern provides prescriptive guidance on how to build a specific aspect of a reliable web application. You can use them together or separately.
 
 The image below shows just some of the considerations that you'll need to take into account when converging to the cloud and the reliable web app pattern provides guidance on those. In fact, the reliable web app pattern builds on real-world tested technologies and techniques, like the Azure Well-Architected Framework to produce the set of patterns that you'll learn about in the image below.
 
