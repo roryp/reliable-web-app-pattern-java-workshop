@@ -47,3 +47,6 @@ azd down
 
 ## Resources
 [Well-Architected Framework Performance portal](https://learn.microsoft.com/azure/well-architected/performance-efficiency)
+
+[RWA Guidance](https://aka.ms/eap/rwa/java/doc)
+[RWA Repo](https://aka.ms/eap/rwa/java)

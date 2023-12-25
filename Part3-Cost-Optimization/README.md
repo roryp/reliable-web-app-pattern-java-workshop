@@ -61,3 +61,4 @@ Next, we will explore the concept of reliability in cloud applications. Please p
 
 ## Resources
 [Well-Architected Framework cost optimization portal](https://learn.microsoft.com/azure/well-architected/cost-optimization)
+[Azure Cost Calculator](https://azure.microsoft.com/pricing/calculator)
