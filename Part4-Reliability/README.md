@@ -1,10 +1,10 @@
 # Reliability
 
-In this part, we'll guide you through the process of testing and configuring two key code-level design patterns: the retry and the circuit-breaker. The retry pattern involves making repeated attempts to execute a task until it succeeds, while the circuit-breaker pattern prevents a system from executing a task that's likely to fail, to avoid further system degradation.
+In this part, we'll guide you through the process of testing and configuring two key code-level design patterns to add redundancy throughout critical flows at different workload layers: the retry and the circuit-breaker. The retry pattern involves making repeated attempts to execute a task until it succeeds, while the circuit-breaker pattern prevents a system from executing a task that's likely to fail, to avoid further system degradation.
 
 ## Retry and Circuit Break Pattern
 
-We built an app configuration setting, `AIRSONIC_RETRY_DEMO`, that lets you simulate and test a transient failure when making a web request to GitHub. When set to 1, this setting simulates a failure for every web request to GitHub, triggering both the retry and circuit-breaker mechanisms. A value of 2 generates a 503 error for every other request. Other values will not trigger these behaviors.
+In the reference example, we built an app configuration setting, `AIRSONIC_RETRY_DEMO`, that lets you simulate and test a transient failure when making a web request to GitHub. When set to 1, this setting simulates a failure for every web request to GitHub, triggering both the retry and circuit-breaker mechanisms. A value of 2 generates a 503 error for every other request. Other values will not trigger these behaviors.
 
 The reference implementation uses the `Spring Boot Actuator` to monitor retries. After deploying the application, navigate to your site’s `/actuator` endpoint to see a list of Spring Boot Actuator endpoints. Navigate to `/actuator/retries` to see retried calls.
 
@@ -42,7 +42,7 @@ Application logging is enabled. To view the logs, navigate to *Diagnose and solv
 
 ## Summary
 
-In this part, we learned how to test and configure two key code-level design patterns: retry, and circuit-breaker, using our implementation. We also learned how to view application logs.
+In this part, we learned how to test and configure two key code-level design patterns: retry, and circuit-breaker. We also learned how to view application logs.
 
 In the sixth part of our series, we will delve into the use of Azure Monitor, a comprehensive solution for collecting, analyzing, and acting on telemetry from your cloud and on-premises environments. This powerful tool will aid us in troubleshooting any issues that may arise. Following that, in Part 7, we will shift our focus to the utilization of Redis Cache. Redis Cache is an in-memory data structure store, used as a database, cache, and message broker. We will explore its performance efficiency and how it can be leveraged to enhance the speed and responsiveness of our applications
 

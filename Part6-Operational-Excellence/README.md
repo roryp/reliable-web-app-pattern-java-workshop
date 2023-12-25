@@ -1,6 +1,6 @@
 # Operational Excellence
 
-One of Proseware's business objectives is to reach a 99.9% service level objective for availability. To meet that objective, the web app is deployed to two regions in an active-passive configuration. The active (primary) region handles 100% of user traffic under normal operations, and data is replicated to the passive (secondary) region asynchronously. 
+One of Proseware's business objectives is to reach a 99.9% service level objective to minimize process variance, chances of human error, and disruption to customers. To meet that objective, the web app is deployed to two regions in an active-passive configuration. The active (primary) region handles 100% of user traffic under normal operations, and data is replicated to the passive (secondary) region asynchronously. 
 
 Application Insights sends web requests to your application at regular intervals from points around the world. It can alert you if your region isn't responding or if it responds too slowly. In this section, we will look at using application insights to identify any issues that might arise in the region. 
 
@@ -36,7 +36,7 @@ Open *Application Insights*, and find the `NullPointerException` that was thrown
 
 ## Conclusion
 
-Combined with Part 4, maintaining operational excellence in your cloud application involves a combination of monitoring, diagnostics, and recovery strategies. By leveraging Azure services, you can ensure your application remains robust and resilient under varying operational conditions and quickly transition from your primary region to the secondary one to mitigate the risk of an outage from impacting availability.
+Combined with Part 4, maintaining operational excellence in your cloud application involves a combination of monitoring, diagnostics, and recovery strategies. By leveraging Azure Monitor, you can monitor your application to ensure it remains robust and resilient under varying operational conditions and quickly transition from your primary region to the secondary one to mitigate the risk of an outage from impacting availability.
 
 Next, we will explore performance efficiency in cloud applications. Please proceed to [Part 7 - Performance Efficiency](../Part7-Performance-Efficiency/README.md) for more information.
 

@@ -1,6 +1,6 @@
 # Performance Efficiency
 
-Performance efficiency is the ability of a workload to scale and meet the demands placed on it by users in an efficient manner. In cloud environments, a workload should anticipate increases in demand to meet business requirements.
+Performance efficiency is the ability of a workload to scale and meet the demands placed on it by users in an efficient manner. In cloud environments, a workload can anticipate increases in demand to meet business requirements using caches.
 
 ## The Cache-Aside pattern
 
@@ -10,13 +10,31 @@ The cache-aside pattern enables us to limit read queries to  the Azure PostgreSQ
 
 For more information, see [cache-aside pattern](https://learn.microsoft.com/azure/architecture/patterns/cache-aside).
 
-1. As per Part 4, let's create some traffice so navigate to https://<APP_NAME>.azurewebsites.net/index and refresh the page. As we witnesses in Part 4, The first time you refresh the page, a call to GitHub is made. In subsequent requests, we see that the API call was only 55ms because it didn't have to connect to SQL Server and instead used the data from Azure Cache for Redis.
+1. As per Part 4, let's create some traffic so navigate to https://<APP_NAME>.azurewebsites.net/index and refresh the page. As we witnessed in Part 4, The first time you refresh the page, a call to GitHub is made. In subsequent requests, we see that the API call was only 55ms because it didn't have to connect to SQL Server and instead used the data from Azure Cache for Redis.
 
 Using the (PREVIEW) Redis Console, we can see this data stored in Redis. You can securely issue commands to your Azure Cache for Redis instances from the Azure portal over a TLS connection. The console is a great way to test out Redis commands and experiment with the data store. You can also use the console to view the current state of your Redis instance.
 
 To access the Redis Console, select the `Console` tab in the working pane of the `Resource menu`. 
 
 ![image of Azure Cache for Redis Console shows user settings](images/proseware-redis.png)
+
+## Conclusion
+
+Use caching to store frequently accessed data or content, reducing the load on your backend infrastructure. The Cache aside pattern checks the cache to see if the data is already stored in memory. If the data is found in the cache, the application can quickly retrieve and return the data, reducing the need to query the persistent data store.
+
+## Workshop Summary
+
+In this workshop we focused on a different aspect of building and deploying a reliable web application pattern with Java on Microsoft Azure. Here's a summary of what we learnt from each part:
+
+| Part | Description |
+|------|-------------|
+| Tooling | Introduced the tools and technologies used throughout the workshop. |
+| RWA Overview | Overview of Reliable Web Applications (RWA) and the patterns used in enterprise web applications. |
+| Cost Optimization| How to optimize costs using nonproduction environments. |
+| Reliability | Design patterns to add redundancy throughout critical flows at different workload layers. |
+| Security | Security aspects of web applications. |
+| Operational Excellence | Minimize process variance, chances of human error, and disruption to customers. |
+| Performance Efficiency| Caching |
 
 ## Cleaning Up
 
