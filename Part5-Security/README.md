@@ -68,4 +68,5 @@ Next, we will delve into operational excellence in cloud applications. Please pr
 
 ## Resources
 [Well-Architected Framework security portal](https://learn.microsoft.com/en-us/azure/well-architected/security)
+
 [Security Checklist](https://learn.microsoft.com/azure/well-architected/security/checklist)
