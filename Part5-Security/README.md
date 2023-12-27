@@ -64,7 +64,7 @@ spring.resources.static-locations=classpath:/public/
 ## Conclusion
 You have now enhanced your application's security and successfully deployed it using Azure Developer CLI.
 
-Next, we will delve into operational excellence in cloud applications. Please proceed to [Part 6 - Operational Excellence](../Part6-Operational-Excellence/README.md) for more information.
+Next, we will delve into operational excellence in cloud applications--> [Part 6 - Operational Excellence](../Part6-Operational-Excellence/README.md) 
 
 ## Resources
 [Well-Architected Framework security portal](https://learn.microsoft.com/en-us/azure/well-architected/security)
