@@ -10,7 +10,7 @@ The reference implementation uses the `Spring Boot Actuator` to monitor retries.
 
 When the `AIRSONIC_RETRY_DEMO` setting is set to 1, we not only simulate a failure for every web request to GitHub, but we also trigger the circuit-breaker mechanism. This mechanism prevents further attempts to call the API when it is failing, thus avoiding unnecessary load and potential cascading failures.
 
-Follow these steps to set up this test:
+## Exercise - Retry and Circuit Break Pattern:
 
 1. Set the `AIRSONIC_RETRY_DEMO` setting to 1 in App Service Configuration.
 

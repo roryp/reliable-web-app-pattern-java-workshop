@@ -12,7 +12,7 @@ By default, your user account is added to the application. To enable additional 
 
 ![Proseware's Azure Active Directory enterprise applications](./images/AAD-Enterprise-Application.png)
 
-## Enable anonymous access to public content
+## Exercise - Enable anonymous access to public content
 
 In this section, we will enable anonymous access to public content.  This will allow users to view public content without having to sign in.
 

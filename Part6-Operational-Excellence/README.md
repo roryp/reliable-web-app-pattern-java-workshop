@@ -18,7 +18,7 @@ The reference implementation demonstrates how to programmatically enable Applica
 
 This dependency adds the necessary Application Insights components to your application build. It allows you to visualize metrics in Azure Application Insights. Spring Boot registers several core metrics in Application Insights such as Java virtual machine (JVM), CPU, Tomcat, and others. Application Insights automatically collects from logging frameworks such as Log4j and Logback.
 
-## Application Map
+## Exercise - Application Map
 
 The Application Map in Application Insights provides a visual representation of the components in your application and the relationships between them. It automatically discovers application components and maps the communication between them. The Application Map is useful for identifying performance bottlenecks and failures in your application.
 
