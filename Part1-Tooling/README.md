@@ -12,11 +12,11 @@
 > - Open the Registry Editor, navigate to `HKLM\SYSTEM\CurrentControlSet\Control\FileSystem` and set DWORD `LongPathsEnabled` to 1.
 > - Run `git config --system core.longpaths true`
 
-## Steps to deploy the reference implementation
+## (Optional) Quick Steps to deploy the reference implementation
 
 This section describes the nine steps to deploy the reference implementation of a reliable web application pattern with Java on Microsoft Azure, including the teardown process.
-
-For users familiar with the deployment process, you can use the following list of the deployments commands as a quick reference. The commands assume you have logged into Azure through the Azure CLI and Azure Developer CLI and have selected a suitable subscription:
+To do the quick steps, you must be authenticated into both az and azd cli and have the appropriate subscription selected
+For users familiar with the deployment process, you can use the following list of the deployments commands as a quick reference.
 
 ```shell
 git clone https://github.com/roryp/reliable-web-app-pattern-java-workshop.git
