@@ -53,7 +53,7 @@ Now that you're logged into Azure CLI and Azure Developer CLI, you can proceed w
 Proseware uses Azure Files integrated with App Service to save training videos that users upload.
 Consider refactoring this integration to use Azure Storage blobs to reduce hosting costs.
 
-## Conclusion
+## Next up
 
 Optimizing costs in nonproduction environments is a continuous process that requires regular review and adjustment of resources. By analyzing costs, identifying cost reduction opportunities, implementing cost reduction measures, and reviewing their impact, you can ensure that you're not overspending on your nonproduction environments.
 
