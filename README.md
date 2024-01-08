@@ -26,6 +26,9 @@ This workshop is designed to help you learn how to take your application's first
 
 Matt Soucoup recorded a video series that walks through the same pillars and patterns as covered in this workshop. You can find the videos [here](https://www.youtube.com/watch?v=5du8gfo9M7g&list=PLI7iePan8aH5wNEbsGS13W46wA2pZQ7Ea).
 
+## Start Here
+- [Part 1 - Tooling](Part1-Tooling/README.md)
+
 ## More Links and Resources
 
 * [Reliable Web App Pattern Code Repository](https://aka.ms/eap/rwa/java)
