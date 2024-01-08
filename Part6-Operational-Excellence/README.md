@@ -34,7 +34,7 @@ Open *Application Insights*, and find the `NullPointerException` that was thrown
 ![AppInsightsFailures](images/application-insights-failures.png)
 ![AppInsightsEndToEndDetails](images/application-insights-end-to-end-details.png)
 
-## Conclusion
+## Next Up
 
 Combined with Part 4, maintaining operational excellence in your cloud application involves a combination of monitoring, diagnostics, and recovery strategies. By leveraging Azure Monitor, you can monitor your application to ensure it remains robust and resilient under varying operational conditions and quickly transition from your primary region to the secondary one to mitigate the risk of an outage from impacting availability.
 
