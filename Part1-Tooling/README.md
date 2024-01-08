@@ -19,8 +19,9 @@ This section describes the nine steps to deploy the reference implementation of 
 For users familiar with the deployment process, you can use the following list of the deployments commands as a quick reference. The commands assume you have logged into Azure through the Azure CLI and Azure Developer CLI and have selected a suitable subscription:
 
 ```shell
-git clone https://github.com/Azure/reliable-web-app-pattern-java-workshop.git
-cd reliable-web-app-pattern-java
+git clone https://github.com/roryp/reliable-web-app-pattern-java-workshop.git
+cd "reliable-web-app-pattern-java-workshop"
+cd "Reference App"
 azd config set alpha.terraform on
 azd env new eap-javarwa
 azd env set DATABASE_PASSWORD "AV@lidPa33word"
