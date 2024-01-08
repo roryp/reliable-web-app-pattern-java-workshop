@@ -61,7 +61,7 @@ spring.resources.static-locations=classpath:/public/
 1. Deploy the application: `azd up`
 2. Once deployed, access the application URL provided by Azure.
 
-## Conclusion
+## Next Up
 You have now enhanced your application's security and successfully deployed it using Azure Developer CLI.
 
 Next, we will delve into operational excellence in cloud applications --> [Part 6 - Operational Excellence](../Part6-Operational-Excellence/README.md) 
