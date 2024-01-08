@@ -45,7 +45,6 @@ If using Windows, ensure you have enabled long paths.  Then clone the repository
 ```shell
 git clone https://github.com/roryp/reliable-web-app-pattern-java-workshop.git
 cd "reliable-web-app-pattern-java-workshop"
-cd "Reference App"
 ```
 
 ### 2. Open Dev Container in Visual Studio Code (optional)
