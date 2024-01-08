@@ -195,7 +195,13 @@ azd env get-values --output json | jq -r .frontdoor_url
 
 Please note that it may take approximately 5 minutes for the Azure App Service to start responding to requests after the code has been deployed in step 6.
 
-### 9. Teardown
+### 9. Next Up
+
+Now that you have deployed the reference implementation, you can move on to the next section of the workshop. 
+
+[Part 2 - RWA Overview](../Part2-RWA-Overview/README.md)
+
+### 10. Appendix
 
 To tear down the deployment, run the following command:
 
@@ -203,6 +209,3 @@ To tear down the deployment, run the following command:
 azd down
 ```
 
-Now that you have deployed the reference implementation, you can move on to the next section of the workshop. 
-
-[Part 2 - RWA Overview](../Part2-RWA-Overview/README.md)
