@@ -12,32 +12,11 @@
 > - Open the Registry Editor, navigate to `HKLM\SYSTEM\CurrentControlSet\Control\FileSystem` and set DWORD `LongPathsEnabled` to 1.
 > - Run `git config --system core.longpaths true`
 
-## Steps to deploy the reference implementation
-
-This section describes the nine steps to deploy the reference implementation of a reliable web application pattern with Java on Microsoft Azure, including the teardown process.
-
-For users familiar with the deployment process, you can use the following list of the deployments commands as a quick reference. The commands assume you have logged into Azure through the Azure CLI and Azure Developer CLI and have selected a suitable subscription:
-
-```shell
-git clone https://github.com/Azure/reliable-web-app-pattern-java.git
-cd reliable-web-app-pattern-java
-azd config set alpha.terraform on
-azd env new eap-javarwa
-azd env set DATABASE_PASSWORD "AV@lidPa33word"
-azd env set APP_ENVIRONMENT prod
-azd env set AZURE_LOCATION westus3
-azd env set AZURE_LOCATION2 eastus
-azd up
-SECONDARY_RESOURCE_GROUP=$(azd env get-values --output json | jq -r .secondary_resource_group)
-azd env set AZURE_RESOURCE_GROUP $SECONDARY_RESOURCE_GROUP
-azd deploy
-```
-
 ## Detailed deployment steps 
 
 The following steps assume you are using a Dev Container inside Visual Studio Code.
 
-### 1. Clone the repo
+### 1. Clone the REference App repo
 
 If using Windows, ensure you have enabled long paths.  Then clone the repository from GitHub:
 
@@ -201,10 +180,31 @@ Now that you have deployed the reference implementation, you can move on to the 
 
 [Part 2 - RWA Overview](../Part2-RWA-Overview/README.md)
 
-### Appendix (only to be run after the workshop)
+### Appendix A (only to be run after the workshop)
 
 To tear down the deployment, run the following command:
 
 ```shell
 azd down
+```
+
+## Appendix B - Quick Steps to deploy the reference implementation
+
+This section describes the nine steps to deploy the reference implementation of a reliable web application pattern with Java on Microsoft Azure, including the teardown process.
+
+For users familiar with the deployment process, you can use the following list of the deployments commands as a quick reference. The commands assume you have logged into Azure through the Azure CLI and Azure Developer CLI and have selected a suitable subscription:
+
+```shell
+git clone https://github.com/Azure/reliable-web-app-pattern-java.git
+cd reliable-web-app-pattern-java
+azd config set alpha.terraform on
+azd env new eap-javarwa
+azd env set DATABASE_PASSWORD "AV@lidPa33word"
+azd env set APP_ENVIRONMENT prod
+azd env set AZURE_LOCATION westus3
+azd env set AZURE_LOCATION2 eastus
+azd up
+SECONDARY_RESOURCE_GROUP=$(azd env get-values --output json | jq -r .secondary_resource_group)
+azd env set AZURE_RESOURCE_GROUP $SECONDARY_RESOURCE_GROUP
+azd deploy
 ```
