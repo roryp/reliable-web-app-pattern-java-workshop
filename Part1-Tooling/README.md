@@ -12,6 +12,27 @@
 > - Open the Registry Editor, navigate to `HKLM\SYSTEM\CurrentControlSet\Control\FileSystem` and set DWORD `LongPathsEnabled` to 1.
 > - Run `git config --system core.longpaths true`
 
+## Steps to deploy the reference implementation
+
+This section describes the nine steps to deploy the reference implementation of a reliable web application pattern with Java on Microsoft Azure, including the teardown process.
+
+For users familiar with the deployment process, you can use the following list of the deployments commands as a quick reference. The commands assume you have logged into Azure through the Azure CLI and Azure Developer CLI and have selected a suitable subscription:
+
+```shell
+git clone https://github.com/Azure/reliable-web-app-pattern-java.git
+cd reliable-web-app-pattern-java
+azd config set alpha.terraform on
+azd env new eap-javarwa
+azd env set DATABASE_PASSWORD "AV@lidPa33word"
+azd env set APP_ENVIRONMENT prod
+azd env set AZURE_LOCATION westus3
+azd env set AZURE_LOCATION2 eastus
+azd up
+SECONDARY_RESOURCE_GROUP=$(azd env get-values --output json | jq -r .secondary_resource_group)
+azd env set AZURE_RESOURCE_GROUP $SECONDARY_RESOURCE_GROUP
+azd deploy
+```
+
 ## Detailed deployment steps 
 
 The following steps assume you are using a Dev Container inside Visual Studio Code.
@@ -21,15 +42,13 @@ The following steps assume you are using a Dev Container inside Visual Studio Co
 If using Windows, ensure you have enabled long paths.  Then clone the repository from GitHub:
 
 ```shell
-git clone https://github.com/roryp/reliable-web-app-pattern-java-workshop.git
-cd "reliable-web-app-pattern-java-workshop"
+git clone https://github.com/Azure/reliable-web-app-pattern-java-workshop.git
+cd reliable-web-app-pattern-java
 ```
 
 ### 2. Open Dev Container in Visual Studio Code (optional)
 
-Ensure Docker Desktop is started and enabled for your WSL terminal [more details](https://learn.microsoft.com/windows/wsl/tutorials/wsl-containers#install-docker-desktop). 
-Open the repository folder in Visual Studio Code. 
-You can do this from the command prompt:
+If required, ensure Docker Desktop is started and enabled for your WSL terminal [more details](https://learn.microsoft.com/windows/wsl/tutorials/wsl-containers#install-docker-desktop). Open the repository folder in Visual Studio Code. You can do this from the command prompt:
 
 ```shell
 code .
@@ -182,33 +201,10 @@ Now that you have deployed the reference implementation, you can move on to the 
 
 [Part 2 - RWA Overview](../Part2-RWA-Overview/README.md)
 
-### Appendix A (only to be run after the workshop)
+### Appendix (only to be run after the workshop)
 
 To tear down the deployment, run the following command:
 
 ```shell
 azd down
 ```
-### Appendix B - Quick Steps to deploy the reference implementation
-
-This section describes the nine steps to deploy the reference implementation of a reliable web application pattern with Java on Microsoft Azure, including the teardown process.
-To do the quick steps, you must be authenticated into both az and azd cli and have the appropriate subscription selected
-For users familiar with the deployment process, you can use the following list of the deployments commands as a quick reference.
-
-```shell
-git clone https://github.com/roryp/reliable-web-app-pattern-java-workshop.git
-cd "reliable-web-app-pattern-java-workshop"
-cd "Reference App"
-azd config set alpha.terraform on
-azd env new eap-javarwa
-azd env set DATABASE_PASSWORD "AV@lidPa33word"
-azd env set APP_ENVIRONMENT prod
-azd env set AZURE_LOCATION westus3
-azd env set AZURE_LOCATION2 eastus
-azd up
-SECONDARY_RESOURCE_GROUP=$(azd env get-values --output json | jq -r .secondary_resource_group)
-azd env set AZURE_RESOURCE_GROUP $SECONDARY_RESOURCE_GROUP
-azd deploy
-```
-
-
