@@ -180,15 +180,7 @@ Now that you have deployed the reference implementation, you can move on to the 
 
 [Part 2 - RWA Overview](../Part2-RWA-Overview/README.md)
 
-### Appendix A (only to be run after the workshop)
-
-To tear down the deployment, run the following command:
-
-```shell
-azd down
-```
-
-## Appendix B - Quick Steps to deploy the reference implementation
+### Appendix A - Quick Steps to deploy the reference implementation
 
 This section describes the nine steps to deploy the reference implementation of a reliable web application pattern with Java on Microsoft Azure, including the teardown process.
 
@@ -207,4 +199,12 @@ azd up
 SECONDARY_RESOURCE_GROUP=$(azd env get-values --output json | jq -r .secondary_resource_group)
 azd env set AZURE_RESOURCE_GROUP $SECONDARY_RESOURCE_GROUP
 azd deploy
+```
+
+### Appendix B (only to be run after the workshop)
+
+To tear down the deployment, run the following command:
+
+```shell
+azd down
 ```
