@@ -201,7 +201,7 @@ Now that you have deployed the reference implementation, you can move on to the 
 
 [Part 2 - RWA Overview](../Part2-RWA-Overview/README.md)
 
-### 10. Appendix
+### Appendix (only to be run after the workshop)
 
 To tear down the deployment, run the following command:
 
