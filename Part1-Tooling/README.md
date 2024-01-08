@@ -43,8 +43,9 @@ The following steps assume you are using a Dev Container inside Visual Studio Co
 If using Windows, ensure you have enabled long paths.  Then clone the repository from GitHub:
 
 ```shell
-git clone https://github.com/Azure/reliable-web-app-pattern-java-workshop.git
-cd reliable-web-app-pattern-java
+git clone https://github.com/roryp/reliable-web-app-pattern-java-workshop.git
+cd "reliable-web-app-pattern-java-workshop"
+cd "Reference App"
 ```
 
 ### 2. Open Dev Container in Visual Studio Code (optional)
