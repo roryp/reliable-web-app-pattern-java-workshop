@@ -14,8 +14,6 @@
 
 ## Detailed deployment steps 
 
-The following steps assume you are using a Dev Container inside Visual Studio Code.
-
 ### 1. Clone the REference App repo
 
 If using Windows, ensure you have enabled long paths.  Then clone the repository from GitHub:
@@ -176,7 +174,7 @@ Please note that it may take approximately 5 minutes for the Azure App Service t
 
 ### 9. Next Up
 
-Now that you have deployed the reference implementation, you can move on to the next section of the workshop. 
+Now that you have deployed the reference implementation, you can move on to the next section of the workshop - an overview of the Reliable Web Application pattern. 
 
 [Part 2 - RWA Overview](../Part2-RWA-Overview/README.md)
 
