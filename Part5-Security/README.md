@@ -46,7 +46,7 @@ This method configures Spring Security to allow all requests to paths that start
 This is public content.
 ```
 5. Save the file.
-6. Open `Reference App\src\airsonic-advanced\airsonic-main\src\main\resources\application.properties` in your IDE.
+6. In the reference app, open `src\airsonic-advanced\airsonic-main\src\main\resources\application.properties` in your IDE.
 7. Add the following code to the `application.properties` file:
 
 ```properties

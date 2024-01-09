@@ -6,7 +6,7 @@ Application Insights sends web requests to your application at regular intervals
 
 ## Monitoring
 
-The reference implementation demonstrates how to programmatically enable Application Insights by adding the following Maven dependency to the `pom.xml` file located at `Reference App/src/airsonic-advanced/airsonic-main/`.
+The reference implementation demonstrates how to programmatically enable Application Insights by adding the following Maven dependency to the `pom.xml` file located at `src/airsonic-advanced/airsonic-main/`.
 
 ```xml
 <dependency>

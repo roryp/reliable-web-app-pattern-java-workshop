@@ -14,7 +14,7 @@
 
 ## Detailed deployment steps 
 
-### 1. Clone the REference App repo
+### 1. Clone the Reference App repo
 
 If using Windows, ensure you have enabled long paths.  Then clone the repository from GitHub:
 
