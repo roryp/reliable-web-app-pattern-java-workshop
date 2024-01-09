@@ -23,7 +23,7 @@ git clone https://github.com/Azure/reliable-web-app-pattern-java-workshop.git
 cd reliable-web-app-pattern-java
 ```
 
-### 2. Open Dev Container in Visual Studio Code (optional)
+### 2. Open Dev Container in Visual Studio Code
 
 If required, ensure Docker Desktop is started and enabled for your WSL terminal [more details](https://learn.microsoft.com/windows/wsl/tutorials/wsl-containers#install-docker-desktop). Open the repository folder in Visual Studio Code. You can do this from the command prompt:
 
