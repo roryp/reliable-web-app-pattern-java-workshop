@@ -199,7 +199,7 @@ azd env set AZURE_RESOURCE_GROUP $SECONDARY_RESOURCE_GROUP
 azd deploy
 ```
 
-### Appendix B (only to be run after the workshop)
+### Appendix B (only to be run after completing the workshop)
 
 To tear down the deployment, run the following command:
 
