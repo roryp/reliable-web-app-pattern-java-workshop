@@ -38,8 +38,8 @@ This Java method configures HTTP security. It sets up rules for which paths requ
 
 This method configures Spring Security to allow all requests to paths that start with `/public/` without requiring authentication.
 
-2. Create the `public` folder in the `src/main/resources` folder. This folder will contain the public content.
-3. Create a `.txt` file and save it as `public.txt` in the `src/main/resources/public` folder. This file will be used to test the public access.
+2. In the reference app, create the `public` folder in the `src\airsonic-advanced\airsonic-main\src\main\resources` folder. This folder will contain the public content.
+3. Create a `.txt` file and save it as `public.txt` in the `src\airsonic-advanced\airsonic-main\src\main\resources` folder. This file will be used to test the public access.
 4. Add the following code to the `public.txt` file:
 
 ```txt
