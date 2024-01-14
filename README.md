@@ -1,5 +1,7 @@
 # Reliable Web Apps Java Workshop
 
+![RWA JAva](rwa_java.png)
+
 [Go to Glossary](#glossary)
 
 This workshop is designed to help you learn how to take your application's first step into the cloud and build reliable web applications using Java. You can think of the Reliable Web Application (RWA) pattern as a pattern of patterns. Each pattern provides prescriptive guidance on how to build a specific aspect of a reliable web application. You can use them together or separately.
