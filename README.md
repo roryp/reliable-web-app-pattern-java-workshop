@@ -4,6 +4,8 @@
 
 This workshop is designed to help you learn how to take your application's first step into the cloud and build reliable web applications using Java. You can think of the Reliable Web Application (RWA) pattern as a pattern of patterns. Each pattern provides prescriptive guidance on how to build a specific aspect of a reliable web application. You can use them together or separately.
 
+Start Here 👉[Part 1 - Tooling](Part1-Tooling/README.md)
+
 ## Table of Contents
 
 - [Part 1 - Tooling](Part1-Tooling/README.md)
@@ -25,9 +27,6 @@ This workshop is designed to help you learn how to take your application's first
 ## Video Walkthrough
 
 Matt Soucoup recorded a video series that walks through the same pillars and patterns as covered in this workshop. You can find the videos [here](https://www.youtube.com/watch?v=5du8gfo9M7g&list=PLI7iePan8aH5wNEbsGS13W46wA2pZQ7Ea).
-
-## Start Here
-- [Part 1 - Tooling](Part1-Tooling/README.md)
 
 ## More Links and Resources
 
