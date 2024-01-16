@@ -10,16 +10,37 @@ The cache-aside pattern enables us to limit read queries to  the Azure PostgreSQ
 
 For more information, see [cache-aside pattern](https://learn.microsoft.com/azure/architecture/patterns/cache-aside).
 
-
 ## Exercise - Caching
 
 - As per Part 4, let's create some traffic so navigate to https://<APP_NAME>.azurewebsites.net/index and refresh the page. 
 - As we witnessed in Part 4, The first time you refresh the page, a call to GitHub is made. In subsequent requests, we see that the API call was only 55ms because it didn't have to connect to SQL Server and instead used the data from Azure Cache for Redis.
-- Using the (PREVIEW) Redis Console, access this data stored in Redis. 
-    - To access the Redis Console, select the `Console` tab in the working pane of the `Resource menu`. 
-- You can securely issue commands to your Azure Cache for Redis instances from the Azure portal over a TLS connection. The console is a great way to test out Redis commands and experiment with the data store. You can also use the console to view the current state of your Redis instance.
+- As we witnessed in Part 6 - we can use Application Insights to view these cache hits by navigating to **Application Insights** for either of your Redis caches in your primary or secondary region.
 
-![image of Azure Cache for Redis Console shows user settings](images/proseware-redis.png)
+Select **Application insights** from the left-hand menu.
+The default **Overview** table shows these columns:
+
+- **Used Memory**
+- **Server Load**
+- **CPU**
+- **Connected Clients**
+- **Expired and Evited Keys**
+- **Errors (Max)**
+
+![redis cpu](images/cpu.jpg)
+
+The default **Performance** table shows these columns:
+
+- **Cache Read and Write**
+- **Cache Hit and Miss**
+
+![redis metrics](images/redis.jpg)
+
+The default **Operations** table shows these columns:
+
+- **Total Operations**
+- **Gets and Sets**
+
+![Operations](images/operations.jpg)
 
 ## Conclusion
 
