@@ -14,9 +14,11 @@ For more information, see [cache-aside pattern](https://learn.microsoft.com/azur
 
 - As per Part 4, let's create some traffic so navigate to https://<APP_NAME>.azurewebsites.net/index and refresh the page. 
 - As we witnessed in Part 4, The first time you refresh the page, a call to GitHub is made. In subsequent requests, we see that the API call was only 55ms because it didn't have to connect to SQL Server and instead used the data from Azure Cache for Redis.
-- As we witnessed in Part 6 - we can use Application Insights to view these cache hits by navigating to **Application Insights** for either of your Redis caches in your primary or secondary region.
+- As we witnessed in Part 6, we can use Application Insights to view these cache hits:
+    - Navigate to either of your application resource groups in your primary or secondary regions.
+    - Select the **Azure redis cache**.
+    - Select **Application insights** from the left-hand menu.
 
-Select **Application insights** from the left-hand menu.
 The default **Overview** table shows these columns:
 
 - **Used Memory**
