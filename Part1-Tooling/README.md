@@ -111,7 +111,7 @@ azd env set AZURE_LOCATION westus3
 
 Ensure that the selected region has availability zones. Azure Database for PostgreSQL - Flexible Server [zone-redundant high availability](https://learn.microsoft.com/azure/postgresql/flexible-server/concepts-high-availability) requires availability zones.
 
-If doing a multi-region deployment, set the `AZURE_LOCATION2` to the secondary region:
+As we doing a multi-region deployment, set the `AZURE_LOCATION2` to the secondary region:
 
 ```shell
 azd env set AZURE_LOCATION2 eastus
@@ -139,7 +139,7 @@ Run the following command to deploy the code to the created infrastructure:
 azd deploy
 ```
 
-If you are doing a multi-region deployment, you must also deploy the code to the secondary region:
+As we are doing a multi-region deployment, you must also deploy the code to the secondary region:
 
 ```shell
 SECONDARY_RESOURCE_GROUP=$(azd env get-values --output json | jq -r .secondary_resource_group)
