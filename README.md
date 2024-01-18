@@ -4,7 +4,9 @@
 
 [Go to Glossary](#glossary)
 
-In this workshop we will deploy a single region of the Reliable Web Application Java pattern using Azure App Service. The workshop is divided into 7 parts and while your example installs, we will attempt to explain the concepts behind the pattern.  This workshop should take approximately 1 1/2 hour to complete. The provisioning of the Azure resources will take 20 minutes and the deployment 20 minutes. Between the provision and deployment, we will explain part 2-7 so you can continue with the workshop while the installation is running.
+In this workshop, we'll deploy a single region of the Reliable Web Application using Azure App Service. The workshop is divided into 7 parts, and while your example installs, we'll attempt to explain the concepts behind the pattern.  This workshop should take approximately 1 1/2 hour to complete: 
+ - The provisioning of the Azure resources will take 20 minutes and the deployment 20 minutes. 
+ - Between the provision and deployment, we will explain part 2-7 so you can continue with the workshop while the installation is running.
 
 ## What the workshop covers
 
