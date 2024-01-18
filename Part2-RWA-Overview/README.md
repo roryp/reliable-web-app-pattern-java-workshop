@@ -38,7 +38,7 @@ The reliable web app pattern is built off of 5 pillars. Each pillar is a set of 
 
 ![Reference Application](./images/reliable-web-app-java.svg)
 
-- The web app uses two regions in an active-passive configuration to meet the service level objective of 99.9%. It uses Azure Front Door as the global load balancer. Front Door routes all traffic to the active region. The passive region is for failover only. The failover plan is manual and there are no automated scripts with this repo.
+- The reference application has the option to use either one or two regions in an active-passive configuration to meet the service level objective of 99.9%. The two region option uses Azure Front Door as the global load balancer. Front Door routes all traffic to the active region. The passive region is for failover only. The failover plan is manual and there are no automated scripts with this repo.
 - All inbound HTTPS traffic passes through Front Door and Web Application Firewall (WAF). WAF inspects the traffic against WAF policies.
 - The web app code implements the Retry, Circuit Breaker, and Cache-Aside patterns. The web app integrates with Azure AD using the Spring Boot Starter for Azure Active Directory.
 - Application Insights is the application performance management tool, and it gathers telemetry data on the web app.
