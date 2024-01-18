@@ -149,6 +149,7 @@ cd reliable-web-app-pattern-java
 azd config set alpha.terraform on
 azd env new eap-javarwa
 azd env set DATABASE_PASSWORD "AV@lidPa33word"
+azd env set APP_ENVIRONMENT dev
 azd env set AZURE_LOCATION eastus
 azd up
 azd deploy
