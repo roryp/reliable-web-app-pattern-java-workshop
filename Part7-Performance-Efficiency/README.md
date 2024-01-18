@@ -65,7 +65,7 @@ In this workshop we focused on a different aspect of building and deploying a re
 ## Cleaning Up
 
 Thank you for attending this workshop.  We hope you learned something and feel more comfortable tackling the patterns that are used in enterprise web applications. You can now clean up the resources that you used.
-To tear down the deployment, run the following command (the process to teardown may take a few minutes):
+To tear down the deployment, run the following command (the process to teardown may take up to 20 minutes):
 
 ```shell
 azd down

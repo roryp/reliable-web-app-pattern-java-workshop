@@ -119,7 +119,7 @@ azd deploy
 
 The duration of the provisioning and deployment process can vary from 20 minutes to over an hour, depending on the system load and your internet bandwidth.
 
-### 8. Open and use the application
+### 7. Open and use the application
 
 Use the following to find the URL for the Proseware application that you have deployed:
 
