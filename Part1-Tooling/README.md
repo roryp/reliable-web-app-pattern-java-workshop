@@ -1,7 +1,6 @@
-
 # Introduction
 
-In this section we will setup the reference example to be explored in part 2-7. The provisioning of the Azure resources will take 20 minutes and the deployment 20 minutes. Between the provision and deployment, please proceed to parts 2-7 so you can continue with the workshop while the installation is running.
+In this section, we'll setup the reference example to be explored in part 2-7. The provisioning of the Azure resources will take 20 minutes and the deployment 20 minutes. Between the provision and deployment, please proceed to parts 2-7 so you can continue with the workshop while the installation is running.
 
 ## Prerequisites
 
