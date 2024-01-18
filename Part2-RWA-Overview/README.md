@@ -34,7 +34,7 @@ The reliable web app pattern is built off of 5 pillars. Each pillar is a set of 
 
 ![The Five Pillars](./images/the-five-pillars.png)
 
-## Reference application
+## Reference Application
 
 ![Reference Application](./images/reliable-web-app-java.svg)
 
