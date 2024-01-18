@@ -14,39 +14,9 @@ Proseware uses the same infrastructure-as-code (IaC) templates for both the deve
 | App Service | P1v3 | P2v3 |
 | Azure Database for PostgreSQL - Flexible Server | Burstable B1ms (B_Standard_B1ms) | General Purpose D4s_v3 (GP_Standard_D4s_v3) |
 
+### Deploying production SKUs
 
-## Exercise - Implementing Cost Reduction Measures
-
-In this exercise, we will focus on implementing cost reduction measures for our Azure environment. One effective way to manage costs in Azure is by adjusting the Service Tier or SKU (Stock Keeping Unit) based on the environment's requirements. 
-
-For non-production environments like development or testing, we can often use a lower SKU as these environments typically don't require the same performance or capacity as production environments. This approach can significantly reduce costs.
-
-We will be downgrading the SKU for our non-production environment using Azure Developer CLI  (azd) commands. 
-
-Here are the steps:
-Before we start, you need to open a shell window and log into Azure Dev CLI (azd) and Azure CLI. Here's how:
-
-1. Open a shell window.
-2. Authenticated to Azure and have the appropriate subscription selected.  To authenticate:
-
-```shell
-az login --scope https://graph.microsoft.com//.default
-azd auth login
-```
-
-Now that you're logged into Azure CLI and Azure Developer CLI, you can proceed with the steps to downgrade the SKU for your non-production environment.
-
-1. Set the application environment to 'dev' using the following command:
-
-    ```shell
-    azd env set APP_ENVIRONMENT dev
-    ```
-
-2. Apply the changes using the `azd up` command:
-
-    ```shell
-    azd up
-    ```
+As this workshop uses a single region, the instructions do not cover deploying production SKUs. However, you can deploy production SKUs by following the instructions in the Reference example as it deploys to 2 regions by default.
 
 ## Note
 
