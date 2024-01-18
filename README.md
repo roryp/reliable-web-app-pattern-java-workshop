@@ -4,16 +4,14 @@
 
 [Go to Glossary](#glossary)
 
-In this workshop we will deploy a single node version of the Reliable Web Application pattern with Java on Microsoft Azure. The workshop is divided into 7 parts and while your example installs, we will attempt to explain the concepts behind the pattern.  Each part will take approximately 5 minutes to complete.  The workshop is designed to be completed in order, and should take approximately 1 1/2 hour to complete.
-
-The installation will take 45 minutes to 1 hour to complete.  You can continue with the workshop while the installation is running.
-The teardown process will take approximately 20 minutes to complete.
+In this workshop we will deploy a single node version of the Reliable Web Application pattern with Java on Microsoft Azure. The workshop is divided into 7 parts and while your example installs, we will attempt to explain the concepts behind the pattern.  This workshop should take approximately 1 1/2 hour to complete. The provisioning of the Azure resources will take 20 minutes and the deployment 20 minutes. Between the provision and deployment, we will explain part 2-7 so you can continue with the workshop while the installation is running.
 
 ## What the workshop covers
 
 This workshop is designed to help you learn how to take your application's first step into the cloud and build reliable web applications using Java. You can think of the Reliable Web Application (RWA) pattern as a pattern of patterns. Each pattern provides prescriptive guidance on how to build a specific aspect of a reliable web application. You can use them together or separately.
 
 Start Here 👉[Part 1 - Tooling](Part1-Tooling/README.md)
+Once you start the provisioning, start Here for the Theoretical Overview 👉[Part 2 - RWA Overview](Part2-RWA-Overview/README.md)
 
 ## Table of Contents
 
