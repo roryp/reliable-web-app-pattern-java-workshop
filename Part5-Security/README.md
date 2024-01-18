@@ -33,17 +33,17 @@ The reference implementation uses the following code to add the Azure Spring Boo
 
 Roles are assigned to users and groups in the Azure Active Directory tenant. The reference implementation creates two app roles (*User* and *Creator*). Roles translate into permissions during authorization. The *Creator* role has permissions to configure the application settings, upload videos, and create playlists. The *User* role can view the videos.
 
-## Exercise - Creating a new *User* 
+## Exercise - View your *User* 
 
 By default, your user account is added to the application. 
-In this exercise, we will explore how to enable additional users.
+In this exercise, we will explore how to view or add additional users.
 
 Let's follow these steps to add a new user to the Proseware application:
 
 - Sign in to the [Azure Portal](https://portal.azure.com).
 - Select **Azure Active Directory** -> **Enterprise Applications**.
 - Search for, then select **Proseware**.
-- Add the user to the application.
+- View your AD user account, that is mapped to the application *User* role. Note:  This screen also gives access to add future AD user for access to this application
 
 ![Proseware's Azure Active Directory enterprise applications](./images/AAD-Enterprise-Application.png)
 
