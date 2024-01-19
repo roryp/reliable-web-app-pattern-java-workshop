@@ -141,31 +141,7 @@ Now that you have deployed the reference implementation, you can move on to the 
 
 [Part 2 - RWA Overview](../Part2-RWA-Overview/README.md)
 
-### Appendix A - Quick Steps to deploy the reference implementation
-
-This section describes the nine steps to deploy the reference implementation of a reliable web application pattern with Java on Microsoft Azure, including the teardown process.
-
-For users familiar with the deployment process, you can use the following list of the deployments commands as a quick reference. Make sure you change the <your-subscription-id> below to your own subscription ID:
-
-```shell
-az login --scope https://graph.microsoft.com//.default
-azd auth login
-export AZURE_SUBSCRIPTION="<your-subscription-id>"
-az account set --subscription $AZURE_SUBSCRIPTION
-azd config set defaults.subscription $AZURE_SUBSCRIPTION
-git clone https://github.com/Azure/reliable-web-app-pattern-java.git
-cd reliable-web-app-pattern-java
-azd env new eap-javarwa
-azd config set alpha.terraform on
-azd env set DATABASE_PASSWORD "AV@lidPa33word"
-azd env new eap-javarwa
-azd env set APP_ENVIRONMENT dev
-azd env set AZURE_LOCATION eastus
-azd provision --no-prompt
-azd deploy
-```
-
-### Appendix B (only to be run after completing the workshop)
+### Appendix A (only to be run after completing the workshop)
 
 To tear down the deployment, run the following command:
 
