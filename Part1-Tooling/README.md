@@ -145,7 +145,7 @@ Now that you have deployed the reference implementation, you can move on to the 
 
 This section describes the nine steps to deploy the reference implementation of a reliable web application pattern with Java on Microsoft Azure, including the teardown process.
 
-For users familiar with the deployment process, you can use the following list of the deployments commands as a quick reference. The commands assume you have logged into Azure through the Azure CLI and Azure Developer CLI and have selected a suitable subscription:
+For users familiar with the deployment process, you can use the following list of the deployments commands as a quick reference. Make sure you change the <your-subscription-id> below to your own subscription ID:
 
 ```shell
 az login --scope https://graph.microsoft.com//.default
