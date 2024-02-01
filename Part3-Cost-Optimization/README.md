@@ -17,8 +17,10 @@ Proseware uses the same infrastructure-as-code (IaC) templates for both the deve
 ### Deploying production SKUs
 
 As this workshop uses a single region, the instructions do not cover deploying production SKUs. However, you can deploy production SKUs by following the instructions in the Reference example by setting the environment ENVIRONMENT to prod. 
- 
-azd env set APP_ENVIRONMENT prod 
+
+```shell
+azd env set APP_ENVIRONMENT prod
+```
 
 ## Note
 
