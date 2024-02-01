@@ -22,6 +22,12 @@ As this workshop uses a single region, the instructions do not cover deploying p
 azd env set APP_ENVIRONMENT prod
 ```
 
+Also, the default deployment is single region.  For multi-region, set LOCATION2 as per instructions. 
+
+```shell
+azd env set AZURE_LOCATION2 eastus
+```
+
 ## Note
 
 Proseware uses Azure Files integrated with App Service to save training videos that users upload.
