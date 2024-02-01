@@ -41,7 +41,7 @@ In this exercise, we will explore how to view or add additional users.
 Let's follow these steps to add a new user to the Proseware application:
 
 - Sign in to the [Azure Portal](https://portal.azure.com).
-- Select **Azure Active Directory** -> **Enterprise Applications**.
+- Select **Microsoft Entra ID** -> **Enterprise Applications**.
 - Search for, then select **Proseware**.
 - View your AD user account, that is mapped to the application *User* role. Note:  This screen also gives access to add future AD user for access to this application
 
