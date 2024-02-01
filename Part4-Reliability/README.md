@@ -19,11 +19,11 @@ When the `AIRSONIC_RETRY_DEMO` setting is set to 1, we not only simulate a failu
 2. Changing an application setting will cause the App Service to restart. Wait for the app to restart.
 
 3. We added Spring Actuator Dependencies to the Proseware project. This enables actuator endpoints. Navigate to the following sites:
-    * https://<APP_NAME>.azurewebsites.net/actuator
-    * https://<APP_NAME>.azurewebsites.net/actuator/retryevents
-    * https://<APP_NAME>.azurewebsites.net/actuator/metrics/resilience4j.circuitbreaker.not.permitted.calls
+    * https://<FRONT_DOOR_URL>/actuator
+    * https://<FRONT_DOOR_URL>/actuator/retryevents
+    * https://<FRONT_DOOR_URL>/actuator/metrics/resilience4j.circuitbreaker.not.permitted.calls
 
-4. Navigate to https://<APP_NAME>.azurewebsites.net/index and refresh the page. Every time you refresh the page, a call to GitHub is made.
+4. Navigate to https://<FRONT_DOOR_URL>/index and refresh the page. Every time you refresh the page, a call to GitHub is made.
 5. Make note of the retry events in the actuator endpoints.
 
 ![proseware-retries](images/proseware-retries.png)
