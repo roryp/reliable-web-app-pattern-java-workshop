@@ -28,7 +28,7 @@ When the `AIRSONIC_RETRY_DEMO` setting is set to 1, we not only simulate a failu
 
 ![proseware-retries](images/proseware-retries.png)
 
-To monitor the circuit-breaker, navigate to the https://<APP_NAME>.azurewebsites.net/actuator/metrics/resilience4j.circuitbreaker.not.permitted.calls endpoint. This endpoint provides metrics about the number of calls that were not permitted due to the circuit breaker being open.
+To monitor the circuit-breaker, navigate to the https://<FRONT_DOOR_URL>/actuator/metrics/resilience4j.circuitbreaker.not.permitted.calls endpoint. This endpoint provides metrics about the number of calls that were not permitted due to the circuit breaker being open.
 
 ![proseware-circuit-breaker](images/proseware-circuit-breaker.png)
 
