@@ -1,7 +1,7 @@
 # Operational Excellence
 
 Proseware aims for a 99.9% service level objective to ensure reliability and availability. Monitoring and proactive maintenance are crucial for anticipating issues and improving customer experience. 
-Operational excellence in cloud applications involves monitoring, diagnostics, and recovery strategies. Azure provides many tools to help ensure application robustness and resilience, allowing quick transition to a secondary region to mitigate outages.
+Operational excellence in cloud applications involves monitoring, diagnostics, and recovery strategies.
 
 ## Exercise - Application Map
 
