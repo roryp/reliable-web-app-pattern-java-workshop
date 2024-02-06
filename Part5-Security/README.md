@@ -1,7 +1,5 @@
 # Security
 
-Proseware leverages Microsoft Entra ID to secure using  Managed Identities. 
-
 Microsoft Entra ID uses Roles to assign users and groups to a Azure Entra ID Tenant. The reference implementation creates two app roles (*User* and *Creator*). Roles translate into permissions during authorization. The *Creator* role has permissions to configure the application settings, upload videos, and create playlists. The *User* role can view the videos.
 
 ## Exercise - View your *User* 
