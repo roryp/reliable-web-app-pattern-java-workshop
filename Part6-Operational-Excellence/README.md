@@ -1,6 +1,6 @@
 # Operational Excellence
 
-Proseware aims for a 99.9% service level objective to ensure minimal process variance, human error, and customer disruption. A reliable web application demonstrates resilience and availability. Implementing Retry and Circuit Breaker patterns enhances application reliability, introducing self-healing qualities and optimizing cloud reliability features.
+Proseware aims for a 99.9% service level objective to ensure reliability and availability. Monitoring and proactive maintenance are crucial for anticipating issues and improving customer experience.
 
 ## Exercise - Application Map
 
