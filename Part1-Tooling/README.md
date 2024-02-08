@@ -115,7 +115,7 @@ Run the following command to create the infrastructure:
 azd provision --no-prompt
 ```
 
-Run the following command to deploy the code to the created infrastructure:
+Once the resources are provisions (this can take a while), run the following command to deploy the code to the created infrastructure:
 
 ```shell
 azd deploy
