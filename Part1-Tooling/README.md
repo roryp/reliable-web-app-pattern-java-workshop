@@ -115,7 +115,8 @@ Run the following command to create the infrastructure:
 azd provision --no-prompt
 ```
 
-It will take a while to provision your resources  - up to 20 minutes and once the resources are provisioned, run the following command to deploy the code to the created infrastructure:
+It will take a while to provision your resources  - up to 20 minutes.
+Once the resources are provisioned, run the following command to deploy the code to the created infrastructure:
 
 ```shell
 azd deploy
