@@ -51,7 +51,7 @@ Once the command palette is open, search for `Dev Containers: Rebuild and Reopen
 
 ### 3. Log in to Azure
 
-Before deploying, you must be authenticated to Azure and have the appropriate subscription selected. Each command will open a browser, allowing you to authenticate:
+Before deploying, you must be authenticated to Azure and have the appropriate subscription selected. Each command will open a browser, allowing you to authenticate. In the VScode terminal in the dev container:
 
 ```shell
 az login --scope https://graph.microsoft.com//.default
