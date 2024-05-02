@@ -81,3 +81,11 @@ To return the system to normal operation, disable the failure mode using this UR
 ```plaintext
 http://localhost:8080/configure/failure?fail=false
 ```
+
+## conclusion
+
+This project provides a simple demonstration of reliable web app patterns in action. By exploring the code and running the application, you can gain a better understanding of how these patterns can enhance the reliability and performance of web applications.
+
+## Next Up
+
+Next, we will deploy the RWA reference application on Azure --> [Part 1 - Tooling](../Part1-Tooling/README.md) 
