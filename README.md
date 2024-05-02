@@ -1,15 +1,15 @@
 # Reliable Web Apps Java Workshop
 
 ## Note 
-For the 5 minute version of this workshop - head here: - [Basic App Demo](Part8-Basic-App/README.md)
+For the 5 minute version of this workshop - head here: - [Basic App Demo](Part0-Basic-App/README.md)
 
 ![RWA JAva](rwa_java.png)
 
 [Go to Glossary](#glossary)
 
-In this workshop, we'll deploy a single region of the Reliable Web Application using Azure App Service. The workshop is divided into 7 parts, and while your example installs, we'll attempt to explain the concepts behind the pattern.  This workshop should take approximately 1 1/2 hour to complete: 
- - The provisioning of the Azure resources will take 20 minutes and the deployment 20 minutes. 
- - Between the provision and deployment, we will explain part 2-7 so you can continue with the workshop while the installation is running.
+In this workshop, we'll deploy a single region of the Reliable Web Application using Azure App Service. The workshop is divided into 8 parts, and while your example installs, we'll attempt to explain the concepts behind the pattern.  This workshop should take approximately 1 1/2 hour to complete: 
+ - The provisioning of the Azure resources for the reference architecure will take 20 minutes and the deployment 20 minutes. 
+ - Between the provision and deployment, we will explain the other Parts so you can continue with the workshop while the installation is running.
 
 ## What the workshop covers
 
@@ -20,14 +20,14 @@ Once you start the provisioning, start here 👉[Part 2 - RWA Overview](Part2-RW
 
 ## Table of Contents
 
-- [1️⃣ Part 1 - Tooling](Part1-Tooling/README.md)
+- [8️⃣ Part 0 - Basic App Demo](Part0-Basic-App/README.md)
+- [1️⃣ Part 1 - Reference architecture](Part1-Tooling/README.md)
 - [2️⃣ Part 2 - RWA Overview](Part2-RWA-Overview/README.md)
 - [3️⃣ Part 3 - Cost Optimization](Part3-Cost-Optimization/README.md)
 - [4️⃣ Part 4 - Reliability](Part4-Reliability/README.md)
 - [5️⃣ Part 5 - Security](Part5-Security/README.md)
 - [6️⃣ Part 6 - Operational Excellence](Part6-Operational-Excellence/README.md)
 - [7️⃣ Part 7 - Performance Efficiency](Part7-Performance-Efficiency/README.md)
-- [8️⃣ Part 8 - Optional Basic App Demo](Part8-Basic-App/README.md)
 
 ## Prerequisites
 
