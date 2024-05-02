@@ -2,9 +2,8 @@
 
 ## Description
 
-This simple project is a Java-based web application that provides a RESTful API for managing products. It utilizes Spring Boot for the backend, and includes features such as retrieving a product by its ID.
-
-The application also integrates automated tests using JUnit and Mockito to ensure the reliability and correctness of its functionalities.
+Reliable web app patterns are design strategies used in web development to ensure the robustness, scalability, and efficiency of web applications.
+This simple project is a Java-based web application that demonstrates various reliable web app patterns, such as caching, resiliency, and fault tolerance.
 
 For caching, the project employs the cache-aside pattern and utilizes the Caffeine library to manage the cache effectively.
 
