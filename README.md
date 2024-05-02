@@ -24,6 +24,7 @@ Once you start the provisioning, start here 👉[Part 2 - RWA Overview](Part2-RW
 - [5️⃣ Part 5 - Security](Part5-Security/README.md)
 - [6️⃣ Part 6 - Operational Excellence](Part6-Operational-Excellence/README.md)
 - [7️⃣ Part 7 - Performance Efficiency](Part7-Performance-Efficiency/README.md)
+- [7️⃣ Part 8 - Basic App Demo](Part8-Basic-App/README.md)
 
 ## Prerequisites
 
