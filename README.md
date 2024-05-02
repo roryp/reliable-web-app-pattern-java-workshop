@@ -1,7 +1,7 @@
 # Reliable Web Apps Java Workshop
 
 ## Note 
-For the 5 minute version of this workshop - head here: - [Basic App Demo](Part0-Basic-App/README.md)
+Only got 5 minute? Head here: - [Basic App Demo](Part0-Basic-App/README.md)
 
 ![RWA JAva](rwa_java.png)
 
@@ -14,10 +14,7 @@ This workshop should take approximately 1 1/2 hour to complete:
 
 ## What the workshop covers
 
-This workshop is designed to help you learn how to take your application's first step into the cloud and build reliable web applications using Java. You can think of the Reliable Web Application (RWA) pattern as a pattern of patterns. Each pattern provides prescriptive guidance on how to build a specific aspect of a reliable web application. You can use them together or separately.
-
-Start here 👉[Part 1 - Tooling](Part1-Tooling/README.md)
-Once you start the provisioning, start here 👉[Part 2 - RWA Overview](Part2-RWA-Overview/README.md)
+This workshop is designed to help you learn how to take your application's first step into the cloud and build reliable web applications using Java. You can think of the Reliable Web Application (RWA) pattern as a pattern of patterns. Each pattern provides prescriptive guidance on how to build a specific aspect of a reliable web application. The patterns are derived from both the Azure Well-Architected Framework and the 12-factor app methodology.
 
 ## Table of Contents
 
