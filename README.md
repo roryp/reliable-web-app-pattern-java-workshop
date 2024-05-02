@@ -1,5 +1,8 @@
 # Reliable Web Apps Java Workshop
 
+## Note 
+For the 5 minute version of this workshop - head here: - [Basic App Demo](Part8-Basic-App/README.md)
+
 ![RWA JAva](rwa_java.png)
 
 [Go to Glossary](#glossary)
@@ -24,7 +27,7 @@ Once you start the provisioning, start here 👉[Part 2 - RWA Overview](Part2-RW
 - [5️⃣ Part 5 - Security](Part5-Security/README.md)
 - [6️⃣ Part 6 - Operational Excellence](Part6-Operational-Excellence/README.md)
 - [7️⃣ Part 7 - Performance Efficiency](Part7-Performance-Efficiency/README.md)
-- [7️⃣ Part 8 - Basic App Demo](Part8-Basic-App/README.md)
+- [8️⃣ Part 8 - Optional Basic App Demo](Part8-Basic-App/README.md)
 
 ## Prerequisites
 
