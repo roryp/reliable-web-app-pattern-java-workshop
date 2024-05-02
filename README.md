@@ -7,9 +7,10 @@ For the 5 minute version of this workshop - head here: - [Basic App Demo](Part0-
 
 [Go to Glossary](#glossary)
 
-In this workshop, we'll deploy a single region of the Reliable Web Application using Azure App Service. The workshop is divided into 8 parts, and while your example installs, we'll attempt to explain the concepts behind the pattern.  This workshop should take approximately 1 1/2 hour to complete: 
- - The provisioning of the Azure resources for the reference architecure will take 20 minutes and the deployment 20 minutes. 
- - Between the provision and deployment, we will explain the other Parts so you can continue with the workshop while the installation is running.
+In this workshop, we'll introduce a simple starter app, and then deploy a single region of the Reliable Web Application Reference Architecture on Azure. 
+This workshop should take approximately 1 1/2 hour to complete: 
+- The provisioning of the Azure resources for the reference architecure will take 20 minutes and the deployment 20 minutes. 
+- Between the provision and deployment, we will explain the other Parts so you can continue with the workshop while the installation is running.
 
 ## What the workshop covers
 
