@@ -1,35 +1,39 @@
 # Introduction
 
+## Notes
 In this section, we'll setup the reference example to be explored in part 2-7. The provisioning and deployment will take 40 minutes. Between the provision and deployment, please proceed to parts 2-7 so you can continue with the workshop while the installation is running.
 
-## Prerequisites
+The reference implementation is a production-grade web application that demonstrates the reliable web app pattern using Java technologies. It guides developers through migrating an on-premises web application to Azure, showcasing architectural changes and enhancements that leverage Azure strengths.
 
-- [Azure Subscription](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers).
-- [Visual Studio Code](https://code.visualstudio.com/).
-- [Docker Desktop](https://www.docker.com/get-started/).
-- [Permissions to register an application in Azure AD](https://learn.microsoft.com/entra/identity-platform/quickstart-register-app).
-- Visual Studio Code [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers).
+## Architecture
 
-> **WINDOWS**
-> If you are using Windows, you must enable long paths.  Perform the following steps as a local Administrator:
->
-> - Open the Registry Editor, navigate to `HKLM\SYSTEM\CurrentControlSet\Control\FileSystem` and set DWORD `LongPathsEnabled` to 1.
-> - Run `git config --system core.longpaths true`
+Contoso Fiber aligned to a hub and spoke network topology in the production deployment architecture to centralize common resources. This network topology provided cost savings, enhanced security, and facilitated network integration (platform and hybrid):
+
+![Architecture](./images/reliable-web-app-java.svg)
+
+This diagram describes the production deployment. In the workshop we will only be deploying a [development deployment](./images/reliable-web-app-java-dev.svg) which is a simplified version.
 
 ## Detailed deployment steps 
 
-### 1. Clone the Reference App repo
+### 1. Clone the repo
 
-If using Windows, ensure you have enabled long paths.  Then clone the repository from GitHub:
+> For Windows users, we recommend using Windows Subsystem for Linux (WSL) to [improve Dev Container performance](https://code.visualstudio.com/remote/advancedcontainers/improve-performance).
+
+```pwsh
+wsl
+```
+
+Clone the repository and open the project using the Dev Container.
 
 ```shell
 git clone https://github.com/Azure/reliable-web-app-pattern-java.git
+
 cd reliable-web-app-pattern-java
 ```
 
 ### 2. Open Dev Container in Visual Studio Code
 
-If required, ensure Docker Desktop is started and enabled for your WSL terminal [more details](https://learn.microsoft.com/windows/wsl/tutorials/wsl-containers#install-docker-desktop). Open the repository folder in Visual Studio Code. You can do this from the command prompt:
+If required, ensure Docker Desktop is started. Open the repository folder in Visual Studio Code. You can do this from the command prompt:
 
 ```shell
 code .
@@ -51,92 +55,79 @@ Once the command palette is open, search for `Dev Containers: Rebuild and Reopen
 
 ### 3. Log in to Azure
 
-Before deploying, you must be authenticated to Azure and have the appropriate subscription selected. Each command will open a browser, allowing you to authenticate. In the VScode terminal in the dev container:
+Before deploying, you must be authenticated to Azure and have the appropriate subscription selected. Run the following command to authenticate:
 
 ```shell
 az login --scope https://graph.microsoft.com//.default
+```
+
+Set the subscription to the one you want to use (you can use [az account list](https://learn.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest#az-account-list) to list available subscriptions):
+
+```shell
+export AZURE_SUBSCRIPTION_ID="<your-subscription-id>"
+```
+
+```pwsh
+az account set --subscription $AZURE_SUBSCRIPTION_ID
+```
+
+Use the next command to login with the Azure Dev CLI (AZD) tool:
+
+```pwsh
 azd auth login
-```
-To list the subscriptions you have access to:
-
-```shell
-az account list
-```
-
-To set the active subscription:
-
-```shell
-export AZURE_SUBSCRIPTION="<your-subscription-id>"
-az account set --subscription $AZURE_SUBSCRIPTION
-azd config set defaults.subscription $AZURE_SUBSCRIPTION
 ```
 
 ### 4. Create a new environment
 
-The environment name should be less than 18 characters and must be comprised of lower-case, numeric, and dash characters (for example, `eap-javarwa`).  The environment name is used for resource group naming and specific resource naming. Also, select a password for the admin user of the database.
+Next we provide the AZD tool with variables that it uses to create the deployment. The first thing we initialize is the AZD environment with a name.
 
-Run the following commands to set these values and create a new environment:
+The environment name should be less than 18 characters and must be comprised of lower-case, numeric, and dash characters (for example, `contosowebapp`).  The environment name is used for resource group naming and specific resource naming.
+
+By default, Azure resources are sized for a development deployment. If doing a production deployment, see the [production deployment](./prod-deployment.md) instructions for more detail.
+
+```shell
+azd env new <pick_a_name>
+```
+
+Enable the AZD Terraform provider:
 
 ```shell
 azd config set alpha.terraform on
-azd env new eap-javarwa
-azd env set DATABASE_PASSWORD "AV@lidPa33word"
 ```
 
-Replace the placeholders for the environment name and database password with your own values.
+Select the subscription that will be used for the deployment:
+```shell
+azd env set AZURE_SUBSCRIPTION_ID $AZURE_SUBSCRIPTION_ID
+```
 
-In this workshop, as we are only using one region, Azure resources will be sized for a "development" mode. Set the `APP_ENVIRONMENT` to `dev` using the following code to deploy development SKUs:
+Set the Azure region to be used:
 
 ```shell
-azd env set APP_ENVIRONMENT dev
+azd env set AZURE_LOCATION <pick_a_region>
 ```
 
-We will explore more information on production development in part 3 - Cost Optimization
+### 5. Create the Azure resources and deploy the code
 
-### 5. Select a region for deployment
-
-Our application will be deployed as a single region. You can find a list of available Azure regions by running the following Azure CLI command.
-
-> ```shell
-> az account list-locations --query "[].name" -o tsv
-> ```
-
-Set the `AZURE_LOCATION` 
+Run the following command to create the Azure resources and deploy the code (about 15-minutes to complete):
 
 ```shell
-azd env set AZURE_LOCATION eastus
+azd up
 ```
 
-### 6. Provision and deploy the application
+### 6. Open and use the application
 
-Run the following command to create the infrastructure:
+Navigate to the Front Door URL in a browser to view the Contoso Fiber CAMS application. Use the Endpoint URL from the output of the deployment.
+
+You will see an output similar to the following:
 
 ```shell
-azd provision --no-prompt
+Deploying services (azd deploy)
+
+  (✓) Done: Deploying service application
+  - Endpoint: https://fd-contosocams-dev-frcfgefndcctbgdh.z02.azurefd.net
 ```
 
-It will take a while to provision your resources  - up to 20 minutes.
-Once the resources are provisioned, run the following command to deploy the code to the created infrastructure:
-
-```shell
-azd deploy
-```
-
-The duration of the provisioning and deployment process can vary from 20 minutes to over an hour, depending on the system load and your internet bandwidth.
-
-### 7. Open and use the application
-
-Use the following to find the URL for the Proseware application that you have deployed:
-
-```shell
-azd env get-values --output json | jq -r .frontdoor_url
-```
-
-![Proseware AAD](images/proseware.png)
-
-Please note that it may take approximately 5 minutes for the Azure App Service to start responding to requests after the code has been deployed in step 6.
-
-### 9. Next Up
+### 7. Next Up
 
 Now that you have deployed the reference implementation, you can move on to the next section of the workshop - an overview of the Reliable Web Application pattern. 
 
@@ -147,5 +138,5 @@ Now that you have deployed the reference implementation, you can move on to the 
 To tear down the deployment, run the following command:
 
 ```shell
-azd down
+azd down --purge --force
 ```
