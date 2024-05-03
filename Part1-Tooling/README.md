@@ -23,7 +23,7 @@ In this section, we'll setup the reference example to be explored in part 2-7. T
 If using Windows, ensure you have enabled long paths.  Then clone the repository from GitHub:
 
 ```shell
-git clone -b proseware https://github.com/Azure/reliable-web-app-pattern-java.git
+git clone https://github.com/Azure/reliable-web-app-pattern-java.git
 cd reliable-web-app-pattern-java
 ```
 
