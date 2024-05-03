@@ -3,11 +3,10 @@
 ## Description
 
 Reliable web app patterns are design strategies used in web development to ensure the robustness, scalability, and efficiency of web applications.
-This simple project is a Java-based web application that demonstrates various reliable web app patterns, such as caching, resiliency, and fault tolerance.
+In this part, we will use a simple project to  demonstrate the core reliable web app patterns - caching, resiliency, and fault tolerance.
 
-For caching, the project employs the cache-aside pattern and utilizes the Caffeine library to manage the cache effectively.
-
-To improve system reliability, resiliency patterns such as circuit breakers and retries are implemented, enhancing the application's fault tolerance.
+- For caching, the project employs the cache-aside pattern and utilizes the Caffeine library to manage the cache effectively.
+- To improve system reliability, resiliency patterns such as circuit breakers and retries are implemented, enhancing the application's fault tolerance.
 
 ## Prerequisites
 
