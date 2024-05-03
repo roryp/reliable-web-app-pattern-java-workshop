@@ -6,7 +6,7 @@ The reliable web app pattern is a set of principles that helps developers succes
 
 ## Objectives
 
-The objectives of the reliable web app pattern are straightforward. It's designed to help you:
+The objectives of the reliable web app pattern are straightforward. They are designed to help you:
 
 ![Objectives](./images/objectives.png)
 
