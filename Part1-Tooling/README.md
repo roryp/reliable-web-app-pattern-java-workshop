@@ -1,17 +1,19 @@
 # Introduction
 
-## Notes
-In this section, we'll setup the reference example to be explored in part 2-7. The provisioning and deployment will take 40 minutes. Between the provision and deployment, please proceed to parts 2-7 so you can continue with the workshop while the installation is running.
+> ## Notes
+> In this section, we'll set up the reference example to be explored in parts 2 through 7 of this workshop. The provisioning and deployment process will take approximately 40 minutes. While the installation is running, please proceed to parts 2 through 7 so you can continue with the workshop.
 
-The reference implementation is a production-grade web application that demonstrates the reliable web app pattern using Java technologies. It guides developers through migrating an on-premises web application to Azure, showcasing architectural changes and enhancements that leverage Azure strengths.
+The reference implementation is a production-grade web application that guides developers through migrating an on-premises web application to Azure, showcasing architectural changes and enhancements that leverage Azure strengths.
 
 ## Architecture
 
-Contoso Fiber aligned to a hub and spoke network topology in the production deployment architecture to centralize common resources. This network topology provided cost savings, enhanced security, and facilitated network integration (platform and hybrid):
+In the workshop we will only be deploying a development deployment which is a simplified version of the full production deployment.
 
-![Architecture](./images/reliable-web-app-java.svg)
+![Architecture](./images/reliable-web-app-java-dev.svg)
 
-This diagram describes the production deployment. In the workshop we will only be deploying a [development deployment](./images/reliable-web-app-java-dev.svg) which is a simplified version.
+
+> ## Notes
+> The production environment aligns to a hub and spoke network architecture to centralize common resources. This network topology provided cost savings, enhanced security, and facilitated network integration (platform and hybrid). The full production deployment is not covered in this workshop but is available in the GitHub repository.
 
 ## Detailed deployment steps 
 
@@ -77,13 +79,11 @@ Use the next command to login with the Azure Dev CLI (AZD) tool:
 azd auth login
 ```
 
-### 4. Create a new environment
+### 4. Create a New Environment
 
-Next we provide the AZD tool with variables that it uses to create the deployment. The first thing we initialize is the AZD environment with a name.
+Next, we provide the AZD tool with variables that it uses to create the deployment. The first thing we initialize is the AZD environment with a name.
 
 The environment name should be less than 18 characters and must be comprised of lower-case, numeric, and dash characters (for example, `contosowebapp`).  The environment name is used for resource group naming and specific resource naming.
-
-By default, Azure resources are sized for a development deployment. If doing a production deployment, see the [production deployment](./prod-deployment.md) instructions for more detail.
 
 ```shell
 azd env new <pick_a_name>
@@ -129,11 +129,11 @@ Deploying services (azd deploy)
 
 ### 7. Next Up
 
-Now that you have deployed the reference implementation, you can move on to the next section of the workshop - an overview of the Reliable Web Application pattern. 
+Now that you have deployed the reference implementation, you can proceed to the next section of the workshop, which provides an overview of the Reliable Web Application pattern. 
 
 [Part 2 - RWA Overview](../Part2-RWA-Overview/README.md)
 
-### Appendix A (only to be run after completing the workshop)
+### Appendix A (To be run only after completing the workshop)
 
 To tear down the deployment, run the following command:
 
