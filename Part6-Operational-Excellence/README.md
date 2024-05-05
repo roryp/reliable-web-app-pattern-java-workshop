@@ -1,7 +1,8 @@
 # Operational Excellence
 
-Proseware aims for a 99.9% service level objective to ensure reliability and availability. Monitoring and proactive maintenance are crucial for anticipating issues and improving customer experience. 
-Operational excellence in cloud applications involves monitoring, diagnostics, and recovery strategies.
+Proseware aims for a 99.9% service level objective to ensure reliability and availability. Operational excellence in cloud applications involves monitoring, diagnostics, and recovery strategies. In the production environment, we adopt a multi-region deployment approach with manual rerouting to a secondary region during unexpected downtimes. This ensures continuous operation and a minimum 99.9% service-level-objective.
+
+![Multi region](images/front-door-origin-group.png)
 
 ## Exercise - Application Map
 

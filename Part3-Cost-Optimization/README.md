@@ -17,19 +17,19 @@ The reference example uses the same infrastructure-as-code (IaC) templates for b
 | App Service                                     | P1v3                                      | P2v3                                        | -                                                 |
 | Azure Database for PostgreSQL - Flexible Server | B_Standard_B1ms (Burstable)                | Not explicitly specified                     | High Availability (ZoneRedundant, Standby Zone 2) |
 
-### Deploying production SKUs
-
-As this workshop uses a single region, the instructions do not cover deploying production SKUs. However, you can deploy production SKUs by following the instructions in the Reference example by setting the environment ENVIRONMENT to prod. 
-
-```shell
-azd env set ENVIRONMENT prod
-```
-
-Also, the default deployment is single region. For multi-region, set AZURE_SECONDARY_LOCATION as per instructions. 
-
-```shell
-azd env set AZURE_SECONDARY_LOCATION eastus
-```
+> ## Note: Deploying Production SKUs
+> 
+> As this workshop uses a single region, the instructions do not cover deploying production SKUs. However, you can deploy production SKUs by following the instructions in the Reference example by setting the environment `ENVIRONMENT` to `prod`.
+> 
+> ```shell
+> azd env set ENVIRONMENT prod
+> ```
+> 
+> Also, the default deployment is single region. For multi-region, set `AZURE_SECONDARY_LOCATION` as per instructions.
+> 
+> ```shell
+> azd env set AZURE_SECONDARY_LOCATION eastus
+> ```
 
 ## Autoscaling
 
