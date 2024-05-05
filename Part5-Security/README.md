@@ -43,22 +43,20 @@ Contoso Fiber chose Private Link for the following reasons:
 - Enhanced security. It lets the application privately access services on Azure and reduces the network footprint of data stores to help protect against data leakage.
 - Minimal effort. Private endpoints support the web app platform and the database platform that the web app uses. Both platforms mirror the existing on-premises setup, so minimal changes are required.
 
-## Exercise - View your *User* 
+## Exercise
 
-By default, your user account is added to the application with the "User" role.
-In this exercise, we will explore how to view or add additional users.
+The Contoso Fiber Customer Account Management System (CAMS) web application is used by the team to manage customer accounts and help them with support tickets related to their internet or cable services. To demo the full application, you can:
 
-- Sign in to the [Azure Portal](https://portal.azure.com).
-- Select **Microsoft Entra ID** -> **App Registrations**.
-- Search for, then select your app e.g. **app-demo-dev-app**.
-- Select **App Roles** -> **App Registrations**.
+1. Click on the "Account" page in the left side menu
+2. Click on the "Add Account" button in the list of accounts
+3. Create an Account
+4. On the "Account Details" page, click on the "New Support Case" button
+5. Create a Support Case
+6. On the "Account Details" page, click on the row of the support case to see the details
+7. Click on the "Escalte to L2" button to escalate the support case
+8. Click on the "Level 2" page in the left side menu to see the list of all escalated support cases
 
-https://learn.microsoft.com/en-us/azure/architecture/web-apps/guides/reliable-web-app/java/apply-pattern#:~:text=Integrate%20with%20the%20identity%20provider
-https://learn.microsoft.com/en-us/entra/identity-platform/howto-add-app-roles-in-apps#assign-users-and-groups-to-roles
-https://ms.portal.azure.com/#view/Microsoft_AAD_RegisteredApps/ApplicationMenuBlade/~/AppRoles/appId/beea1319-b47b-45ec-aa47-58ecd9c4e1ad/isMSAApp~/false
-
-- View your Entra ID user account, that is mapped to the application *User* role. Note: This screen also gives access to add future Entra ID users for access to this application
-
+In the web app, the Contoso Fiber team uses this process, with the help of role based access, to address customer support issues in a timely manner.
 
 ## Next Up
 
