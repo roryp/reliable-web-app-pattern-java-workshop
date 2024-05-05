@@ -4,21 +4,31 @@ Proseware aims for a 99.9% service level objective to ensure reliability and ava
 
 ![Multi region](images/front-door-origin-group.png)
 
+An **Azure Database for PostgreSQL Flexible Server** is in the secondary region. This database is a read replica of the primary database. In the event of an outage in the primary region, the application can continue to function using the secondary database
+
 ## Exercise - Application Map
 
-In Part 4, the player service couldn't access the stored files due to the circuit breaker being open.
-In this exercise, we'll use Application Map to locate the NullPointerExceptions:
+## Application Insights
 
-1. Select **Application Map** from the left-hand menu.
-2. Select the **Web** component to view the Application Map for your application.
+Exceptions in the Contoso Fiber CAMS web application are reported with Application Insights. 
 
-Open *Application Insights*, and find the `NullPointerException` that was thrown while processing the videos.
+![AppInsightsFailures](./images/appinsights_failures.png)
 
-![AppInsightsFailures](images/application-insights-failures.png)
+Click on an exception to see the end-to-end details:
 
-You can also select the transactions on the right-hand side to see the end-to-end details of the failed requests.
+![AppInsightsEndToEndDetails](./images/appinsights-end-to-end.png)
 
-![AppInsightsEndToEndDetails](images/application-insights-end-to-end-details.png)
+Navigate to the Application Map blade:
+
+![AppInsightsApplicationMap](./images/appinsights_map.png)
+
+Navigate to the Performance blade:
+
+![AppInsightsPerformance](./images/appinsights_performance.png)
+
+Navigate to the Live Metrics blade to see real-time performance:
+
+![AppInsightsLiveMetrics](./images/appinsights_live_metrics.png)
 
 ## Next Up
 
