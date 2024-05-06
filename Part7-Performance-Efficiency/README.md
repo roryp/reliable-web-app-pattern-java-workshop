@@ -8,8 +8,6 @@ The Cache-Aside pattern is a technique used to manage in-memory data caching. It
 
 The cache-aside pattern enables us to limit read queries to the Azure PostgreSQL Flexible Server. It also provides a layer of redundancy that can keep parts of our application running in the event of an issue with Azure PostgreSQL Database.
 
-For more information, see [cache-aside pattern](https://learn.microsoft.com/azure/architecture/patterns/cache-aside).
-
 ## Exercise - Caching
 
 1. Click on the "Accounts" link in the left-side menu of the Contoso Fiber application.
@@ -79,6 +77,8 @@ The default **Operations** table shows these columns:
 ## Conclusion
 
 Caching is a powerful technique for enhancing the performance and scalability of your application. By storing frequently accessed data or content in a cache, you can significantly reduce the load on your backend infrastructure and improve response times. The Cache-Aside pattern is particularly effective in this regard. This pattern first checks the cache to see if the desired data is already stored in memory. If the data is found in the cache, the application can quickly retrieve and return it, bypassing the need for a potentially time-consuming query to the persistent data store. This efficient use of resources can lead to a more responsive and resilient application, capable of handling high traffic loads while providing a smooth user experience.
+
+For more information, see [cache-aside pattern](https://learn.microsoft.com/azure/architecture/patterns/cache-aside).
 
 ## Workshop Summary
 
