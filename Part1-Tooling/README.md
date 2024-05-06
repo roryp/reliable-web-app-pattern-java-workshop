@@ -1,7 +1,7 @@
 # Introduction
 
 > ## Notes
-> In this section, we'll set up the reference example to be explored in parts 2 through 7 of this workshop. The provisioning and deployment process will take approximately 40 minutes. While the installation is running, please proceed to parts 2 through 7 so you can continue with the workshop.
+In this section, we set up the reference example to be explored in Parts 2 through 7 of this workshop. The provisioning and deployment process will take approximately 40 minutes. While the installation is running, please proceed to Parts 2 through 7 to continue with the workshop.
 
 The reference implementation is a production-grade web application that guides developers through migrating an on-premises web application to Azure, showcasing architectural changes and enhancements that leverage Azure strengths.
 
