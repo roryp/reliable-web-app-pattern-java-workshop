@@ -4,7 +4,7 @@ In this part, we guide you through the process of testing and configuring two ke
 
 Building upon the foundations set in Part 0, where we introduced basic retry and circuit-breaker mechanisms using simple examples, this section dives deeper into their practical applications within larger, more complex systems. Here, we demonstrate how these patterns can be effectively scaled to handle higher loads and more critical business operations, enhancing the overall reliability of your application.
 
-## Retry and Circuit Break Pattern
+## Retry Pattern
 
 In the reference example, we built an app configuration setting, `CONTOSO_RETRY_DEMO`, that allows you to simulate and test a transient failure when making a web request to GitHub. When set to 1, this setting simulates a failure for every web request to GitHub, triggering both the retry and circuit-breaker mechanisms. A value of 2 generates a 503 error for every other request. Other values will not trigger these behaviors.
 
@@ -30,9 +30,25 @@ When the `CONTOSO_RETRY_DEMO` setting is set to 1, we not only simulate a failur
 
 ![proseware-retries](images/contoso-retries.png)
 
-To monitor the circuit-breaker, navigate to the https://<FRONT_DOOR_URL>/actuator/metrics/resilience4j.circuitbreaker.not.permitted.calls endpoint. This endpoint provides metrics about the number of calls that were not permitted due to the circuit breaker being open.
+## Circuit Break Pattern
 
-![proseware-circuit-breaker](images/contoso-circuit-breaker.png)
+1. Set the `CONTOSO_RETRY_DEMO` setting to 2 in App Service Configuration.
+
+To see the Circuit Breaker pattern in action you can follow these steps:
+
+1. Click on the "Service Plans" link in the left-side menu of the Contoso Fiber application. This will try to make a query to retrieve a list of all service plans. And, because the `CONTOSO_RETRY_DEMO` setting is set to 1, the application will return an error.
+
+    ![Service plans error page](images/contoso-service-plans-page-error.png)
+
+1. Navigate to the following page in your browser to observe the retry events that now describe circuit breaker behavior.
+    * https://<FRONT_DOOR_URL>/actuator/retryevents
+
+    ![Spring actuator endpoint displaying messages for retry events](images/contoso-retries-3-fails.png)
+
+1. Navigate to the following page in your browser to observe the circuit breaker behavior.
+    * https://<FRONT_DOOR_URL>/actuator/metrics/resilience4j.circuitbreaker.not.permitted.calls
+
+    ![Spring actuator endpoint displaying messages for circuitbreaker](images/contoso-circuit-breaker.png)
 
 ## Logs
 

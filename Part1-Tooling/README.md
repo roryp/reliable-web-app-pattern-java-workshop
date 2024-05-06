@@ -127,6 +127,10 @@ Deploying services (azd deploy)
   - Endpoint: https://fd-contosocams-dev-frcfgefndcctbgdh.z02.azurefd.net
 ```
 
+Click on the "Service Plans" link in the left-side menu of the Contoso Fiber application. This will try to make a query to retrieve a list of all service plans.
+
+![Service plans page](images/contoso-service-plans-page.png)
+
 ### 7. Next Up
 
 Now that you have deployed the reference implementation, you can proceed to the next section of the workshop, which provides an overview of the Reliable Web Application pattern. 
