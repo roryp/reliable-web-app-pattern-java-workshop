@@ -86,6 +86,46 @@ Test the application again by accessing `http://localhost:8080/product/1`.
 > ## Notes
 > Remember to close your terminal by pressing `Ctrl+C` to stop the application.
 
+## Circuit Breaker in Testing
+
+The circuit breaker pattern is crucial for managing failures in distributed systems. It prevents a network or service failure from causing your application to become unstable. This pattern temporarily halts operations when a particular service or operation fails repeatedly, which is vital for maintaining overall system health.
+
+The `ProductServiceTest` class in the `Part0-Basic-App/demo/src/test/java/com/example/demo/service/ProductServiceTest.java` tests this behavior by simulating failures to trigger the circuit breaker. Here's an explanation of the test and the method it tests:
+
+### Code Snippets and Explanation
+
+**getProductById Method in ProductService**
+
+This method includes a circuit breaker and retry mechanism, which are critical for handling failures in production environments. Here’s how it works:
+
+```java
+@CircuitBreaker(name = "default", fallbackMethod = "fallbackProduct")
+@Retry(name = "default")
+public Product getProductById(Long id) {
+    if (someConditionThatCausesFailure) {
+        throw new RuntimeException("Simulated service failure");
+    }
+    return new Product(id, "Product Name", "Product Description");
+}
+```
+
+**ProductServiceTest Class**
+
+The test method simulates a scenario where the `getProductById` method is called and a failure is expected to trigger the circuit breaker:
+
+```java
+@Test
+public void testGetProductById_WithFailure() {
+    when(productService.getProductById(anyLong())).thenThrow(new RuntimeException("Simulated failure"));
+    assertThrows(RuntimeException.class, () -> productService.getProductById(1L));
+}
+```
+
+This test ensures that the circuit breaker is functioning as expected by verifying that an exception is thrown when the method is repeatedly called under failure conditions.
+
+These explanations and code snippets help illustrate how the circuit breaker pattern is implemented and tested within this part of the workshop.
+
+
 ## Conclusion
 
 This project provides a simple demonstration of reliable web app patterns in action. By exploring the code and running the application, you can gain a better understanding of how these patterns can enhance the reliability and performance of web applications.
