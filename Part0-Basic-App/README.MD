@@ -109,13 +109,7 @@ This method includes a circuit breaker and retry mechanism, which are critical f
         return new Product(id, "Product Name", "Product Description");
     }
 ```
-The line if (failForCircuitBreakerTest || Math.random() > 0.7) in the getProductById method plays a critical role in testing and demonstrating the resilience of the application under unpredictable conditions. Here's a detailed explanation:
-
-This condition integrates a manual flag (failForCircuitBreakerTest) and a probabilistic factor (Math.random() > 0.7) to simulate failures within the system. The manual flag allows developers to forcibly trigger the failure mode, which is useful during controlled tests to ensure that the circuit breaker properly handles expected failure scenarios. On the other hand, the random component introduces a degree of unpredictability into the system's behavior, which mimics real-world scenarios where services may fail sporadically due to various unpredictable factors such as network issues, server overload, or external service failures.
-
-Using a random factor with a threshold of 0.7 means that there is approximately a 30% chance of triggering a failure whenever this method is called. This setup helps in validating the robustness of the system's fault tolerance mechanisms. It ensures that the application can gracefully handle interruptions and continue functioning without major disruptions, thereby maintaining a reliable service level for users even under adverse conditions.
-
-Incorporating such randomness and manual flags into the system's logic is necessary for thorough testing of the resilience patterns implemented in the application. It provides a way to ensure that the circuit breaker and other defensive programming techniques are correctly configured and capable of handling real-world operational stresses effectively.
+The line `if (failForCircuitBreakerTest || Math.random() > 0.7)` in the `getProductById` method is crucial for testing and demonstrating the resilience of the application. It simulates failures by combining a manual flag (`failForCircuitBreakerTest`) and a random factor (`Math.random() > 0.7`). This setup allows developers to trigger failure scenarios and introduces unpredictability, mimicking real-world conditions. By validating the system's fault tolerance mechanisms, it ensures reliable service even under adverse conditions.
 
 **ProductServiceTest Class**
 
