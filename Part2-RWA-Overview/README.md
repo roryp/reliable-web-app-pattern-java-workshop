@@ -1,6 +1,6 @@
 # Reliable Web App Pattern - Java Overview
 
-The reliable web app pattern is a set of principles that helps developers successfully migrate web applications to the cloud. The pattern focuses on the minimal changes needed to ensure the success of your web app in the cloud.
+The reliable web app pattern is a set of principles that help developers successfully migrate web applications to the cloud. The pattern focuses on the minimal changes needed to ensure the success of your web app in the cloud.
 
 ![Pattern of patterns](./images/pattern-of-patterns.png)
 
