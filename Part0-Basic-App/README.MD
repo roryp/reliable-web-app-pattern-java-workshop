@@ -32,7 +32,7 @@ Start the application using Maven:
 mvn spring-boot:run
 ```
 
-You can then access the API at `http://localhost:8080`.
+You can then access the API at `http://localhost:8080/product/1`.
 
 ### Example API Call
 
