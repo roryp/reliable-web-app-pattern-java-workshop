@@ -7,7 +7,7 @@ Optimizing costs in environments is a continuous process that requires regular r
 
 In Part 0, we introduced the cache-aside pattern with the Caffeine library to enhance performance. In this section on Cost Optimization, we explore how adjusting cache settings and choosing cost-effective resources can significantly reduce operational costs while maintaining performance. This practical application of caching not only optimizes response times but also efficiently manages resource costs by reducing the need for more expensive compute resources.
 
-The reference example has a target SLO of at least 99.9% for availability (about 8.7 hours of downtime per year). Its production environment needs SKUs that meet its service level agreements (SLAs), features, and scale needed. However, its nonproduction environments don't need the same capabilities. Here, we will explore how to optimize costs in nonproduction environments by using cheaper SKUs that have lower capacity and SLAs.
+However, its non-production environments do not need the same capabilities. Here, we explore how to optimize costs in non-production environments by using cheaper SKUs with lower capacity and SLAs.
 
 The reference example uses the same infrastructure-as-code (IaC) templates for both the development and production deployments. The only difference is a few SKU variations to optimize costs in the development environment. The option exists to use cheaper SKUs in the development environment for Azure Cache for Redis, App Service, and Azure Database for PostgreSQL Flexible Server. The following table shows the services and the SKUs selected for each environment.
 
