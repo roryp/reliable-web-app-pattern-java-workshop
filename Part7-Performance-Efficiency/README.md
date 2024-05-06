@@ -46,9 +46,7 @@ For more information, see [cache-aside pattern](https://learn.microsoft.com/azur
 
 ## Exercise - Caching monitoring
 
-- As per Part 4, let's create some traffic. Navigate to https://<FRONT_DOOR_URL>/index and refresh the page. 
-- As we witnessed in Part 4, the first time you refresh the page, a call to GitHub is made. In subsequent requests, we see that the API call was only 55ms because it didn't have to connect to PostgreSQL Server and instead used the data from Azure Cache for Redis.
-- As we witnessed in Part 6, we can use Application Insights to view these cache hits:
+We can use Application Insights to view cache hits:
     - Navigate to your application resource group
     - Select the **Azure Redis Cache**.
     - Select **Application Insights** from the left-hand menu.
