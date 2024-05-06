@@ -12,7 +12,7 @@ The objectives of the reliable web app pattern are straightforward. They are des
 
 ## The Five Pillars
 
-The reliable web app pattern is built off of 5 pillars. Each pillar is a set of patterns that are derived from both the Azure Well-Architected Framework and 12-factor app methodology.
+The reliable web app pattern is built off of five pillars. Each pillar is a set of patterns that are derived from both the Azure Well-Architected Framework and 12-factor app methodology.
 
 ![The Five Pillars](./images/the-five-pillars.png)
 
