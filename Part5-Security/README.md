@@ -1,6 +1,6 @@
 # Security
 
-In Part 0, did not have a security framework. This section focuses on how to secure our reference example by implementing comprehensive role-based access control and utilizing Azure Web Application Firewall to protect against a wider array of threats
+In Part 0, there was no security framework. This section focuses on how to secure our reference example by implementing comprehensive role-based access control and utilizing Azure Web Application Firewall to protect against a wider array of threats.
 The Reliable Web App pattern uses managed identities to implement identity-centric security. Private endpoints, web application firewall, and restricted access to the web app provide a secure ingress.
 
 ## RBAC (role-based access control)
