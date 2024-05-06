@@ -4,20 +4,20 @@ Performance efficiency is the ability of a workload to scale and meet the demand
 
 ## The Cache-Aside pattern
 
-The Cache-Aside pattern is a technique that's used to manage in-memory data caching. It reduces the request response time and can lead to increased response throughput. This efficiency reduces the number of horizontal scaling events, making the app more capable of handling traffic bursts. It also improves service availability by reducing the load on the primary data store and decreasing the likelihood of service outages.
+The Cache-Aside pattern is a technique used to manage in-memory data caching. It reduces the request response time and can lead to increased response throughput. This efficiency reduces the number of horizontal scaling events, making the app more capable of handling traffic bursts. It also improves service availability by reducing the load on the primary data store and decreasing the likelihood of service outages.
 
-The cache-aside pattern enables us to limit read queries to  the Azure PostgreSQL Flexible Server. It also provides a layer of redundancy that can keep parts of our application running in the event of issue with Azure PostgreSQL Database.
+The cache-aside pattern enables us to limit read queries to the Azure PostgreSQL Flexible Server. It also provides a layer of redundancy that can keep parts of our application running in the event of an issue with Azure PostgreSQL Database.
 
 For more information, see [cache-aside pattern](https://learn.microsoft.com/azure/architecture/patterns/cache-aside).
 
 ## Exercise - Caching
 
-- As per Part 4, let's create some traffic so navigate to https://<FRONT_DOOR_URL>/index and refresh the page. 
-- As we witnessed in Part 4, The first time you refresh the page, a call to GitHub is made. In subsequent requests, we see that the API call was only 55ms because it didn't have to connect to PostgreSQL Server and instead used the data from Azure Cache for Redis.
+- As per Part 4, let's create some traffic. Navigate to https://<FRONT_DOOR_URL>/index and refresh the page. 
+- As we witnessed in Part 4, the first time you refresh the page, a call to GitHub is made. In subsequent requests, we see that the API call was only 55ms because it didn't have to connect to PostgreSQL Server and instead used the data from Azure Cache for Redis.
 - As we witnessed in Part 6, we can use Application Insights to view these cache hits:
     - Navigate to your application resource group
-    - Select the **Azure redis cache**.
-    - Select **Application insights** from the left-hand menu.
+    - Select the **Azure Redis Cache**.
+    - Select **Application Insights** from the left-hand menu.
 
 The default **Overview** table shows these columns:
 
@@ -25,7 +25,7 @@ The default **Overview** table shows these columns:
 - **Server Load**
 - **CPU**
 - **Connected Clients**
-- **Expired and Evited Keys**
+- **Expired and Evicted Keys**
 - **Errors (Max)**
 
 ![redis cpu](images/cpu.jpg)
@@ -46,11 +46,11 @@ The default **Operations** table shows these columns:
 
 ## Conclusion
 
-Use caching to store frequently accessed data or content, reducing the load on your backend infrastructure. The Cache aside pattern checks the cache to see if the data is already stored in memory. If the data is found in the cache, the application can quickly retrieve and return the data, reducing the need to query the persistent data store.
+Use caching to store frequently accessed data or content, reducing the load on your backend infrastructure. The Cache-Aside pattern checks the cache to see if the data is already stored in memory. If the data is found in the cache, the application can quickly retrieve and return the data, reducing the need to query the persistent data store.
 
 ## Workshop Summary
 
-In this workshop we focused on a different aspect of building and deploying a reliable web application pattern with Java on Microsoft Azure. Here's a summary of what we learnt from each part:
+In this workshop, we focused on different aspects of building and deploying a reliable web application pattern with Java on Microsoft Azure. Here's a summary of what we learned from each part:
 
 | Part | Description |
 |------|-------------|
