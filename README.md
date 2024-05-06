@@ -18,7 +18,7 @@ This workshop is designed to help you learn how to take your application's first
 
 ## Table of Contents
 
-- [0️⃣ Part 0 - Basic App Demo](Part0-Basic-App/README.md)
+- [0️⃣ Part 0 - Basic App Demo](Part0-Basic-App/README.MD)
 - [1️⃣ Part 1 - Reference architecture](Part1-Tooling/README.md)
 - [2️⃣ Part 2 - RWA Overview](Part2-RWA-Overview/README.md)
 - [3️⃣ Part 3 - Cost Optimization](Part3-Cost-Optimization/README.md)
