@@ -86,6 +86,31 @@ Test the application again by accessing `http://localhost:8080/product/1`.
 > ## Notes
 > Remember to close your terminal by pressing `Ctrl+C` to stop the application.
 
+## Application Properties Configuration
+
+The `application.properties` file in Part0-Basic-App contains key settings that define the behavior of the application and its resilience mechanisms. Here's a detailed explanation of each setting:
+
+### Cache Configuration
+- `spring.cache.type=caffeine`: Specifies the type of cache used. Caffeine provides a high-performance, near-optimal caching library based on Java.
+- `spring.cache.cache-names=products`: Defines the specific cache names, in this case 'products', which is used to cache product data.
+- `spring.cache.caffeine.spec=maximumSize=500,expireAfterAccess=600s`: Sets the cache specifications where `maximumSize=500` limits the number of entries in the cache, and `expireAfterAccess=600s` ensures items are expired from the cache if not accessed within 600 seconds.
+
+### Resilience4j Circuit Breaker Configuration
+- `resilience4j.circuitbreaker.instances.default.register-health-indicator=true`: Enables a health indicator for the default circuit breaker instance, useful for monitoring the health of circuit breakers.
+- `resilience4j.circuitbreaker.instances.default.sliding-window-type=COUNT_BASED`: Configures the sliding window type to be count-based, affecting how failure rates are calculated.
+- `resilience4j.circuitbreaker.instances.default.sliding-window-size=10`: Specifies the size of the sliding window for failure rate calculation.
+- `resilience4j.circuitbreaker.instances.default.failure-rate-threshold=50`: Sets the failure rate threshold at which the circuit breaker will trip, in this case at 50%.
+- `resilience4j.circuitbreaker.instances.default.wait-duration-in-open-state=10000ms`: Defines how long the circuit breaker should stay in the open state before switching to half-open, in milliseconds.
+- `resilience4j.circuitbreaker.instances.default.automatic-transition-from-open-to-half-open-enabled=true`: Allows automatic transition from open to half-open state, facilitating the recovery process.
+
+### Resilience4j Retry Configuration
+- `resilience4j.retry.instances.default.maxAttempts=3`: Defines the maximum number of attempts for a retry, set to 3.
+- `resilience4j.retry.instances.default.wait-duration=2000`: Specifies the wait duration between retries, in milliseconds.
+- `resilience4j.retry.instances.default.retry-exceptions=java.io.IOException`: Lists the exceptions that qualify for a retry, in this case, `java.io.IOException`.
+
+This configuration not only fine-tunes the application's performance and reliability but also showcases how to manage system resilience effectively in a cloud environment.
+
+
 ## Circuit Breaker in Testing
 
 The circuit breaker pattern is crucial for managing failures in distributed systems. It prevents a network or service failure from causing your application to become unstable. This pattern temporarily halts operations when a particular service or operation fails repeatedly, which is vital for maintaining overall system health.
