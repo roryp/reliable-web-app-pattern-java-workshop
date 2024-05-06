@@ -79,7 +79,7 @@ http://localhost:8080/configure/failure?fail=false
 ```
 Test the application again by accessing `http://localhost:8080/product/1`.
 
-> Note
+> ## Notes
 > Remember to close your terminal by pressing `Ctrl+C` to stop the application.
 
 ## Conclusion
