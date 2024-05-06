@@ -1,6 +1,6 @@
 # Reliable Web App Pattern - Java Overview
 
-The reliable web app pattern is a set of principles that helps developers successfully migrate web applications to the cloud. The pattern focuses on the minimal changes you need to make to ensure the success of your web app in the cloud.
+The reliable web app pattern is a set of principles that helps developers successfully migrate web applications to the cloud. The pattern focuses on the minimal changes needed to ensure the success of your web app in the cloud.
 
 ![Pattern of patterns](./images/pattern-of-patterns.png)
 
@@ -12,13 +12,13 @@ The objectives of the reliable web app pattern are straightforward. They are des
 
 ## The Five Pillars
 
-The reliable web app pattern is built off of five pillars. Each pillar is a set of patterns that are derived from both the Azure Well-Architected Framework and the 12-factor app methodology.
+The reliable web app pattern is built on five pillars. Each pillar is a set of patterns that are derived from both the Azure Well-Architected Framework and the 12-factor app methodology.
 
 ![The Five Pillars](./images/the-five-pillars.png)
 
 ## Reference Application
 
-Contoso Fiber aligned to a hub and spoke network topology in the production deployment architecture to centralize common resources. This network topology provided cost savings, enhanced security, and facilitated network integration (platform and hybrid):
+Contoso Fiber is aligned with a hub and spoke network topology in the production deployment architecture to centralize common resources. This network topology provided cost savings, enhanced security, and facilitated network integration (platform and hybrid):
 
 ![Architecture](./images/reliable-web-app-java.svg)
 
@@ -39,8 +39,9 @@ Contoso Fiber aligned to a hub and spoke network topology in the production depl
 
 ## Next Up
 
-The next five sections we'll delve into each of the 5 pillars. We will begin by examining cost optimization strategies.
+In the next five sections, we'll delve into each of the five pillars. We will begin by examining cost optimization strategies.
 
 [Part 3 - Cost Optimization](../Part3-Cost-Optimization/README.md)
+
 
 
