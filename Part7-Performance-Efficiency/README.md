@@ -50,17 +50,17 @@ Use caching to store frequently accessed data or content, reducing the load on y
 
 ## Workshop Summary
 
-In this workshop, we focused on different aspects of building and deploying a reliable web application pattern with Java on Microsoft Azure. Here's a summary of what we learned from each part:
+In this workshop, we focused on different aspects of building and deploying a reliable web application pattern with Java on Microsoft Azure. Here's a summary of the topics covered in each part:
 
-| Part | Description |
-|------|-------------|
-| Tooling | Introduced the tools and technologies used throughout the workshop. |
-| RWA Overview | Overview of Reliable Web Applications (RWA) and the patterns used in enterprise web applications. |
-| Cost Optimization| How to optimize costs using nonproduction environments. |
-| Reliability | Design patterns to add redundancy throughout critical flows at different workload layers. |
-| Security | Security aspects of web applications. |
-| Operational Excellence | Minimize process variance, chances of human error, and disruption to customers. |
-| Performance Efficiency| Caching |
+| Part | Topics Covered |
+|------|----------------|
+| Tooling | Introduction to the tools and technologies used throughout the workshop. |
+| RWA Overview | Detailed exploration of Reliable Web Applications (RWA) and the associated patterns. |
+| Cost Optimization | Strategies for optimizing costs using nonproduction environments. |
+| Reliability | Implementing design patterns to ensure redundancy across different system layers. |
+| Security | Overview of the key security features and configurations. |
+| Operational Excellence | Approaches to minimize process variance and enhance operational consistency. |
+| Performance Efficiency | Techniques and practices for improving caching and overall application performance.
 
 ## Cleaning Up
 
