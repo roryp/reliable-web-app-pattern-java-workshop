@@ -12,7 +12,7 @@ The reference implementation uses the `Spring Boot Actuator` to monitor retries.
 
 When the `CONTOSO_RETRY_DEMO` setting is set to 1, we not only simulate a failure for every web request to GitHub, but we also trigger the circuit-breaker mechanism. This mechanism prevents further attempts to call the API when it is failing, thus avoiding unnecessary load and potential cascading failures.
 
-## Exercise - Retry and Circuit Break Pattern:
+## Exercise - Retry Pattern:
 
 1. Set the `CONTOSO_RETRY_DEMO` setting to 1 in App Service Configuration.
 
@@ -30,7 +30,7 @@ When the `CONTOSO_RETRY_DEMO` setting is set to 1, we not only simulate a failur
 
 ![proseware-retries](images/contoso-retries.png)
 
-## Circuit Break Pattern
+## Exercise - Circuit Breaker Pattern
 
 1. Set the `CONTOSO_RETRY_DEMO` setting to 2 in App Service Configuration.
 
