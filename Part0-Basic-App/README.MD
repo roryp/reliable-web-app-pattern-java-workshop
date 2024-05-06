@@ -63,6 +63,12 @@ To simulate failures in the system, which will trigger the circuit breaker or re
 ```plaintext
 http://localhost:8080/configure/failure?fail=true
 ```
+You can then trigger the failure at `http://localhost:8080/product/1`.
+
+View the logs in your browser and terminal:
+
+![Failure Logs](./images/failure-web.png)
+![Failure Logs](./images/failure.png)
 
 ### Disabling Failures
 
@@ -71,8 +77,12 @@ To return the system to normal operation, disable the failure mode using this UR
 ```plaintext
 http://localhost:8080/configure/failure?fail=false
 ```
+Test the application again by accessing `http://localhost:8080/product/1`.
 
-## conclusion
+> Note
+> Remember to close your terminal by pressing `Ctrl+C` to stop the application.
+
+## Conclusion
 
 This project provides a simple demonstration of reliable web app patterns in action. By exploring the code and running the application, you can gain a better understanding of how these patterns can enhance the reliability and performance of web applications.
 
