@@ -1,7 +1,7 @@
 # Reliable Web Apps Java Workshop
 
 ## Note 
-Only got 5 minute? Head here: - [Basic App Demo](Part0-Basic-App/README.md)
+Only got 5 minute? Head here: - [Basic App Demo](Part0-Basic-App/README.MD)
 
 ![RWA JAva](rwa_java.png)
 
