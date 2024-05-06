@@ -12,19 +12,13 @@ In this quick demo, we will explore reliable web app patterns. These are design 
 
 ## Installation
 
-1. Clone the repository:
+1. Navigate to the project directory:
 
 ```bash
-git clone https://github.com/roryp/patterndemo.git
+cd Part0-Basic-App/demo
 ```
 
-2. Navigate to the project directory:
-
-```bash
-cd your-repo-name
-```
-
-3. Install dependencies:
+2. Install dependencies:
 
 ```bash
 mvn clean install
