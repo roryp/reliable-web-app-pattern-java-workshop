@@ -169,5 +169,3 @@ The `application.properties` file in Part0-Basic-App contains key settings that 
 - `resilience4j.retry.instances.default.maxAttempts=3`: Defines the maximum number of attempts for a retry, set to 3.
 - `resilience4j.retry.instances.default.wait-duration=2000`: Specifies the wait duration between retries, in milliseconds.
 - `resilience4j.retry.instances.default.retry-exceptions=java.io.IOException`: Lists the exceptions that qualify for a retry, in this case, `java.io.IOException`.
-
-This configuration not only fine-tunes the application's performance and reliability but also showcases how to manage system resilience effectively in a cloud environment.
