@@ -1,6 +1,6 @@
 # Performance Efficiency
 
-Performance efficiency is the ability of a workload to scale and meet the demands placed on it by users in an efficient manner. In cloud environments, a workload can anticipate increases in demand to meet business requirements using caches.
+Performance efficiency is the ability of a workload to scale and meet the demands placed on it by users in an efficient manner. In cloud environments, a workload can anticipate increases in demand to meet business requirements using caches. Building on the simple caching strategies introduced in Part 0, this section further explores how these strategies can be developed into more robust caching mechanisms, enabling our applications to handle increased traffic loads efficiently and maintaining high performance under varying loads.
 
 ## The Cache-Aside pattern
 
