@@ -2,7 +2,7 @@
 
 The Reliable Web App pattern uses managed identities to implement identity-centric security. Private endpoints, web application firewall, and restricted access to the web app provide a secure ingress.
 
-## RBAC
+## RBAC (role-based access control)
 
 The web app also includes a role-based access control (RBAC) feature. The Contoso Fiber team uses Microsoft Entra ID for authentication. Contoso Fiber chose Microsoft Entra ID for the following reasons:
 
@@ -15,7 +15,7 @@ This system has an "Account Manager" role and a "Field Service" role. The "Accou
 
 ![image of Microsoft Entra ID Enterprise Applications Role Assignment](images/contoso-fiber-app-role-assignment.png)
 
-## WAF
+## WAF (Web Application Firewall)
 
 Azure Web Application Firewall (WAF) is Azure's web application firewall and provides centralized protection of from common web exploits and vulnerabilities.
 

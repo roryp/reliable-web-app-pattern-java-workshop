@@ -40,7 +40,6 @@ Application logging is enabled. To view the logs, navigate to *Diagnose and solv
 
 ![Application Logs](images/appservice-diagnose-and-solve-problems-application-logs.png)
 
-
 ## Next Up
 
 In this part, we learned how to test and configure two key code-level design patterns: retry, and circuit-breaker. We also learned how to view application logs.
