@@ -2,6 +2,8 @@
 
 In this part, we'll guide you through the process of testing and configuring two key code-level design patterns to add redundancy throughout critical flows at different workload layers: the retry and the circuit-breaker. The retry pattern involves making repeated attempts to execute a task until it succeeds, while the circuit-breaker pattern prevents a system from executing a task that's likely to fail, to avoid further system degradation.
 
+Building upon the foundations set in Part 0, where we introduced basic retry and circuit-breaker mechanisms using simple examples, this section dives deeper into their practical applications within larger, more complex systems. Here, we demonstrate how these patterns can be effectively scaled to handle higher loads and more critical business operations, enhancing the overall reliability of your application.
+
 ## Retry and Circuit Break Pattern
 
 In the reference example, we built an app configuration setting, `CONTOSO_RETRY_DEMO`, that lets you simulate and test a transient failure when making a web request to GitHub. When set to 1, this setting simulates a failure for every web request to GitHub, triggering both the retry and circuit-breaker mechanisms. A value of 2 generates a 503 error for every other request. Other values will not trigger these behaviors.
@@ -43,6 +45,11 @@ Application logging is enabled. To view the logs, navigate to *Diagnose and solv
 ## Next Up
 
 In this part, we learned how to test and configure two key code-level design patterns: retry, and circuit-breaker. We also learned how to view application logs.
+
+Next we need to address the important topic of [Part 5 - Security](../Part5-Security/README.md).
+
+## Resources
+[Well-Architected Framework reliability portal](https://learn.microsoft.com/azure/well-architected/reliability)
 
 Next we need to address the important topic of [Part 5 - Security](../Part5-Security/README.md).
 
