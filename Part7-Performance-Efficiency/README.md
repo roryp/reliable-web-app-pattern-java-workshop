@@ -12,6 +12,40 @@ For more information, see [cache-aside pattern](https://learn.microsoft.com/azur
 
 ## Exercise - Caching
 
+1. Click on the "Accounts" link in the left-side menu of the Contoso Fiber application.
+
+    ![Accounts page](images/contoso-accounts-page.png)
+
+1. Fill out the form and click "Add Account". This will create a new account and store it in the Azure PostgreSQL Flexible Server.
+
+    ![New account page](images/contoso-account-new-page.png)
+
+1. When successful, the account details page is shown.
+
+      ![Account details page](images/contoso-account-details-page.png)
+
+    Using the (PREVIEW) Redis Console we can see this data stored in Redis.
+
+    Open the Redis Console by navigating to the Azure Cache for Redis resource in the Azure Portal and clicking the "Console" link above the overview details for this resource.
+
+    ![image of Azure Cache for Redis Console](images/azure-redis-console.png)
+
+    Run the following command to see all cached keys:
+
+    ```
+    SCAN 0 COUNT 1000 MATCH *
+    ```
+
+    Run the next command to see the cached account details data:
+
+    ```
+    GET com.contoso.cams.account-details::1 
+    ```
+
+    ![image of Azure Cache for Redis Keys](images/redis-keys.png)
+
+## Exercise - Caching monitoring
+
 - As per Part 4, let's create some traffic. Navigate to https://<FRONT_DOOR_URL>/index and refresh the page. 
 - As we witnessed in Part 4, the first time you refresh the page, a call to GitHub is made. In subsequent requests, we see that the API call was only 55ms because it didn't have to connect to PostgreSQL Server and instead used the data from Azure Cache for Redis.
 - As we witnessed in Part 6, we can use Application Insights to view these cache hits:
@@ -68,7 +102,7 @@ Thank you for attending this workshop.  We hope you learned something and feel m
 To tear down the deployment, run the following command (the process to teardown may take up to 20 minutes):
 
 ```shell
-azd down
+azd down --purge --force
 ```
 
 ## Resources
