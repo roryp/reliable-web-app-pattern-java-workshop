@@ -1,6 +1,6 @@
 # Reliability
 
-In this part, we guide you through the process of testing and configuring two key code-level design patterns to add redundancy throughout critical flows at different workload layers: the retry and the circuit-breaker. The retry pattern involves making repeated attempts to execute a task until it succeeds, while the circuit-breaker pattern prevents a system from executing a task that's likely to fail, to avoid further system degradation.
+In this part, we guide you through the process of testing and configuring two key code-level design patterns to add redundancy throughout critical flows at different workload layers: the retry and the circuit-breaker. The retry pattern involves making repeated attempts to execute a task until successful, while the circuit-breaker pattern prevents a system from executing a task that's likely to fail, to avoid further system degradation.
 
 Building upon the foundations set in Part 0, where we introduced basic retry and circuit-breaker mechanisms using simple examples, this section dives deeper into their practical applications within larger, more complex systems. Here, we demonstrate how these patterns can be effectively scaled to handle higher loads and more critical business operations, enhancing the overall reliability of your application.
 
