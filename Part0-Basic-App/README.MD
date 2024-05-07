@@ -1,6 +1,13 @@
-# Basic Reliable Web App Demo
+## Introduction to Reliable Web App Patterns
 
-In this quick demo, we will explore reliable web app patterns. These are design strategies used in web development to ensure the robustness, scalability, and efficiency of web applications. We will use a simple project to demonstrate core reliable web app patterns such as caching, resiliency, and fault tolerance.
+In this workshop, we explore foundational techniques in building robust web applications. These patterns are essential for ensuring that our applications can handle unexpected failures and high loads with grace. Understanding and implementing these patterns will equip you with the skills needed to design and maintain resilient systems.
+
+## Why These Exercises?
+
+The exercises introduced here are designed to give you hands-on experience with real-world scenarios. By deferring detailed exercises to Part 4, we ensure that you have the necessary context and technical foundation to fully appreciate and understand the significance of each pattern. This structured approach helps you connect the exercises with their practical applications in building reliable systems.
+
+**Note**: The prerequisites for these exercises are integrated into the RWA deployment dev container available by Part 4, allowing you to focus more on learning and less on setup.
+
 
 - For caching, the project employs the cache-aside pattern and utilizes the Caffeine library to manage the cache effectively.
 - To improve system reliability, resiliency patterns such as circuit breakers and retries are implemented, enhancing the application's fault tolerance.
