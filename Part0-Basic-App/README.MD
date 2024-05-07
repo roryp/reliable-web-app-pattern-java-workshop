@@ -1,6 +1,17 @@
-## Introduction to Reliable Web App Patterns
+## Introduction to Part 0: Setting Up and Understanding the Basics
 
-In this workshop, we explore foundational techniques in building robust web applications. These patterns are essential for ensuring that our applications can handle unexpected failures and high loads with grace. Understanding and implementing these patterns will equip you with the skills needed to design and maintain resilient systems.
+Before diving into the exercises of Part 0, it's crucial to understand the infrastructure and tools required to run and manage Java applications effectively. This part of the workshop is designed to familiarize you with the essential software and practices needed for Java development with Maven in Visual Studio Code, particularly focusing on Java 17 projects.
+
+### Essential Installations for Running the Demo Application
+
+To ensure you have a smooth experience during this workshop, here are the installations you'll need:
+
+- **Java Development Kit (JDK) 17**: Essential for developing Java applications. Make sure to install JDK 17 as specified in your `pom.xml` file. [Download JDK 17](https://jdk.java.net/17/)
+- **Apache Maven**: A build automation tool used primarily for Java projects. It helps manage project dependencies and streamline the build process. [Download Maven](https://maven.apache.org/download.cgi)
+- **Visual Studio Code**: A lightweight but powerful source code editor that runs on your desktop. It's available for Windows, macOS, and Linux. [Download Visual Studio Code](https://code.visualstudio.com/Download)
+- **Java Extension Pack for Visual Studio Code**: This extension pack includes essential Java tools such as Maven support and Java 17 compatibility. [Download Java Extension Pack](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
+
+This setup not only prepares you for the immediate tasks but also lays the groundwork for advanced topics covered later in this workshop. The aim is to ensure that by the time you reach more complex exercises, you are well-equipped with the knowledge and tools needed to tackle them effectively.
 
 ## Why These Exercises?
 
