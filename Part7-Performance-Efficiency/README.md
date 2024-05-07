@@ -2,6 +2,9 @@
 
 Performance efficiency is the ability of a workload to scale and meet the demands placed on it by users in an efficient manner. In cloud environments, a workload can anticipate increases in demand to meet business requirements using caches. Building on the simple caching strategies introduced in Part 0, this section further explores how to develop these strategies into more robust caching mechanisms, enabling our applications to handle increased traffic loads efficiently and maintaining high performance under varying loads.
 
+> ## NOTES
+> Remember, the auto-scaling strategies discussed during the cost optimization are not only vital for reducing operational costs but also play a critical role in maintaining high availability and operational excellence. It's essential to consider auto-scaling as a part of operational excellence, ensuring that your application remains efficient and responsive under varying loads.
+
 ## The Cache-Aside pattern
 
 The Cache-Aside pattern is a technique used to manage in-memory data caching. It reduces the request response time and can lead to increased response throughput. This efficiency reduces the number of horizontal scaling events, making the app more capable of handling traffic bursts. It also improves service availability by reducing the load on the primary data store and decreasing the likelihood of service outages.
@@ -32,8 +35,6 @@ The cache-aside pattern enables us to limit read queries to the Azure PostgreSQL
 
     ```
     SCAN 0 COUNT 1000 MATCH *
-
-Remember, the auto-scaling strategies discussed during the cost optimization are not only vital for reducing operational costs but also play a critical role in maintaining high availability and operational excellence. It's essential to consider auto-scaling as a part of operational excellence, ensuring that your application remains efficient and responsive under varying loads.
     ```
 
     Run the next command to see the cached account details data:
