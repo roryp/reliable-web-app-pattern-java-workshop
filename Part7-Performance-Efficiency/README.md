@@ -32,6 +32,8 @@ The cache-aside pattern enables us to limit read queries to the Azure PostgreSQL
 
     ```
     SCAN 0 COUNT 1000 MATCH *
+
+Remember, the auto-scaling strategies discussed during the cost optimization are not only vital for reducing operational costs but also play a critical role in maintaining high availability and operational excellence. It's essential to consider auto-scaling as a part of operational excellence, ensuring that your application remains efficient and responsive under varying loads.
     ```
 
     Run the next command to see the cached account details data:
