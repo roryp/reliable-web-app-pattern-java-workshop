@@ -22,6 +22,10 @@ public class ProductService {
     @CircuitBreaker(name = "default", fallbackMethod = "fallback")
     @Retry(name = "default")
     public Product getProductById(Long id) {
+        // This if statement is used to simulate a service failure for testing purposes.
+        // The 'failForCircuitBreakerTest' variable is used to manually trigger a failure.
+        // The 'Math.random() > 0.7' condition randomly triggers a failure about 30% of the time.
+        // When a failure is triggered, a RuntimeException is thrown with the message "Service failure - Circuit breaker activated".
         if (failForCircuitBreakerTest || Math.random() > 0.7) {
             throw new RuntimeException("Service failure - Circuit breaker activated");
         }
