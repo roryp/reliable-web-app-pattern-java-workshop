@@ -1,4 +1,9 @@
-# Security
+## Introduction to Managed Identity and Security Practices
+
+For enhancing security within Azure-based applications, it is crucial to use managed identities for intra-service communication. Managed identities eliminate the need for developers to manage credentials explicitly, reducing the risk of credential leaks. If a component does not support managed identities, alternative mechanisms such as certificates or passwords should be employed. However, it is paramount to store these credentials securely in Azure Key Vault and regularly rotate them to maintain security integrity.
+
+This section provides a fundamental understanding of why managed identities and these secure practices are essential for protecting your applications and data.
+
 
 In Part 0, there was no security framework. This section focuses on how to secure our reference example by implementing comprehensive role-based access control and utilizing Azure Web Application Firewall to protect against a wider array of threats.
 The Reliable Web App pattern uses managed identities to implement identity-centric security. Private endpoints, web application firewall, and restricted access to the web app provide a secure ingress.
