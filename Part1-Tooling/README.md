@@ -17,9 +17,7 @@ In the workshop we will only be deploying a development deployment which is a si
 
 ## Detailed deployment steps 
 
-### 1. Clone the repo
-
-> For Windows users, we recommend using Windows Subsystem for Linux (WSL) to [improve Dev Container performance](https://code.visualstudio.com/remote/advancedcontainers/improve-performance).
+**Note**: The teardown section previously found here has been removed to avoid redundancy and maintain clarity throughout the workshop. Teardown instructions are comprehensively covered in Part 7, ensuring that all resources are appropriately cleaned up at the conclusion of the workshop.
 
 ```pwsh
 wsl
